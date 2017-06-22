@@ -1,0 +1,142 @@
+.custom-text {
+    font-family: "Helvetica Neue", "Roboto", "Arial", "Droid Sans", "sans-serif";    
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
+.minute-label {
+    padding: 5px 20px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.category-frame {
+    display: block;
+    margin-bottom: 10px
+}
+
+.category-label {
+    display: inline-block;
+    padding: 3px 20px;  
+    background: #009fe8;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.font_rajdhani_medium {
+    font-family: Rajdhani-Medium
+}
+
+.font_rajdhani_semibold {
+    font-family: Rajdhani-SemiBold
+}
+
+.font_rajdhani {
+    font-family: Rajdhani
+}
+
+.s12 {
+    font-size: 12px;
+}
+
+.s10 {
+    font-size: 10px;
+}
+
+.s11 {
+    font-size: 11px;
+}
+
+.s14 {
+    font-size: 14px;
+}
+
+.s16 {
+    font-size: 16px;
+}
+
+.s18 {
+    font-size: 18px;
+}
+
+.s20 {
+    font-size: 20px;
+}
+
+.s22 {
+    font-size: 22px;
+}
+
+.s24 {
+    font-size: 24px;    
+    line-height: 1.4;
+}
+
+.s36 {
+    font-size: 36px;    
+    line-height: 1.4;
+}
+
+.s26 {
+    font-size: 26px;
+}
+
+.s13 {
+    font-size: 13px;
+}
+
+.white {
+    color: white;
+}
+
+.yellow {
+    color: #e78b06
+}
+
+.darkblack {
+    color: #303030
+}
+
+.middleblack {
+    color: #808080
+}
+
+.lightwhitecolor {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.custom-title {
+    margin-bottom: 0px;
+    font-family: Rajdhani;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.thick-line {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 3px solid #e78b06
+}
+
+.thin-line {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-top: 3px solid #e78b06
+}
+
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-Medium;
+    src: url(../fonts/Rajdhani-Medium.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-SemiBold;
+    src: url(../fonts/Rajdhani-SemiBold.ttf);
+}

@@ -1,0 +1,140 @@
+.dropdown.filter {
+    padding:0 0 0 0 0;
+    float:left;
+    height: 600px;
+    background: #f4f4f4;
+}
+
+.dropdown.filterColumn {
+    padding:0 0 0 0 0;
+    float:left;
+    height: 100%;
+    box-sizing: inherit;
+    text-align:left;
+    line-height: 64px;
+    list-style-type:none;
+    list-style-position:outside;
+    color:#fff;
+}
+
+.dropdown.filterColumn.targetAreas {
+    width: 33%;
+    background: #f4f4f4;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+.dropdown.filterColumn.movements {
+    width: 33%;
+    background: #f4f4f4;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+.dropdown.filterColumn.duration {
+    width: 34%;
+    background: #f4f4f4;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+#menu6 {
+    border: none
+}
+
+.dropdown.filterHeading {
+    color: #fff;
+    margin: 0 0 0 0;
+    background: #323233;
+    border-left: 1px solid rgba(255,255,255,0.025);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    padding: 25px;
+}
+
+.dropdown.filterHeading h6 {
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-family: Rajdhani;
+    text-transform: uppercase;
+    color: inherit;
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.dropdown.filterHeading hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 3px solid #e68906
+}
+
+.dropdown.filterHeading p {
+    color: #9e9e9e;
+    margin: 0px;
+    padding: 0px;
+    font-size: 11px;
+    line-height: 2;    
+}
+
+.dropdown.filter-options {
+    padding-top: 8px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0;
+    color: #fff;
+}
+
+.dropdown-columns { 
+    display: inline-block;
+    width: 100%;
+    float: left;
+    margin: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 0px;
+    padding-bottom: 4px;
+}
+
+.dropdown-columns li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-columns li a {
+    color: #555;
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.3;
+    overflow: hidden;
+    display: block;
+    list-style: none;
+    transition: all .2s; 
+}
+
+.dropdown-columns li a:hover,
+.dropdown-columns li a:active {
+    outline: none;
+    color: #fff;
+    background: #00aeef;
+}
+
+#quickStart {
+    font-family: Rajdhani;
+    font-size: 18px;
+    
+    padding: 16px;
+    
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.top_nav .dropdown-menu li a {
+    padding: 2px 0px;
+}

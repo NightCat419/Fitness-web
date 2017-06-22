@@ -1,0 +1,569 @@
+.nav_menu.with-opacity {    
+    background: rgba(255, 192, 0, 0.8);
+}
+.nav_menu {
+    z-index: 10;
+}
+
+.main_col {
+    margin-right: 200px;
+}
+
+.toggle {
+    padding-bottom: 15px;
+}
+
+.top_nav {
+    margin-right: 200px;
+    visibility: visible;
+}
+
+body .container.body .background_container {    
+    background-image: url(../images/dashboard/background.jpg);
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    min-height: 64px;
+    z-index: 8;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.x_panel.no_background {
+    background: none;
+    border: none;
+}
+
+#video_of_the_day {        
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto; 
+    padding-top: -10px;
+}
+
+.dashboard_today_content {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+#thumbnail-views {        
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto; 
+    padding-top: -10px;
+}
+
+.col-today-workout-desc {
+    padding-right: 80px;
+    padding-left: 0px;
+}
+.col-today-workout-video {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#thumbnail-views {
+    top: -50px;
+    background: none;
+    padding: 0px;
+    position: relative;
+    z-index: 12;
+}
+
+.col-md-4.thumbnail_container {
+    width: 33.3333%; 
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.schedule_controls {    
+    display: block;
+    width: 100%;
+    padding: 2em 5% 2.5em 5%;
+}
+
+.layoutHeader {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 5% 15px 5%;
+}
+
+#workoutsTitle {
+    font-family: Rajdhani-SemiBold;
+    font-size: 24px;
+    color: #303030;
+    line-height: 40px;
+    margin-left: 8px;
+}
+
+.result_count {
+    padding: 0 2em;
+    border: solid 1px lightgray;
+    border-radius: 3px;
+    font-family: Rajdhani-SemiBold;
+    font-size: 18px;
+    line-height: 32px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 3px;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+}
+
+#scheduleForLabel {
+    font-family: Rajdhani-SemiBold;
+    font-size: 24px;
+    color: #e78b06;
+}
+
+#scheduleDate {
+    font-family: Rajdhani-SemiBold;
+    font-size: 24px;
+    color: #303030;
+}
+
+.archive-link {
+    float: right;
+}
+
+.archive-link img {
+    width: 14px;
+    height: 14px;
+    top: -1px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.schedule_controls .archive-link {
+    border-bottom: 1px dotted #ddd;
+    font-size: 14px;    
+    line-height: 2;
+    color: #303030;
+}
+
+.schedule_controls .archive-link:hover {    
+    color: #e78b06;
+}
+
+.schedule_controls .jumpTo {
+    overflow: hidden;
+    padding: 0px;
+    text-align: center;
+    border-radius: 0px;
+    margin-top: 0.75em;
+    background: transparent;
+}
+
+.schedule_controls .jumpTo .mybutton-group {
+    width: 100%;
+    float: none;
+    margin: 0px auto;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    background: #fff;
+    overflow: hidden;
+}
+
+.mybutton-group {
+    font-size: 0;
+}
+
+.weekly-schedule .jumpTo {
+    background-color: #303030;
+    padding: 10px 0 0;
+    vertical-align: middle;
+    color: #ddd;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.schedule_controls .jumpTo .mybutton {
+    text-transform: uppercase;
+    border-radius: 0px !important;
+    float: left;
+    width: 12.5%;
+    padding: 5px 0px;
+    line-height: 32px;
+    display: inline-block;
+    margin: 0;
+    color: #555;
+    font-size: 16px;
+    font-family: Rajdhani;
+    opacity: 1;
+    background: none;
+    transition: all .075s ease-in-out;
+    border-right: 1px solid #ccc;
+    vertical-align: top;
+}
+
+.schedule_controls .jumpTo .mybutton:last-child {
+    margin-right: 0px;
+    border-right: 0px;
+    background: #eee;
+    color: #555;
+}
+
+.schedule_controls .jumpTo .mybutton:last-child:hover {
+    background: #e78b06;
+    color: white;
+}
+
+.schedule_controls .jumpTo .mybutton:hover {
+    background: #505050;
+    color: white;
+}
+
+.weekly-schedule .jumpTo .mybutton {
+    background-color: gray;
+}
+
+.mybutton-group .mybutton {
+    margin: 0;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    font-size: 0.9rem;
+}
+
+.mybutton {
+    text-align: center;
+    cursor: pointer;
+}
+
+.row.no-margin {
+    margin: 0px;
+}
+
+.row.no-margin.top_area {
+    background: #ffffff;
+}
+
+.x_panel.wod_schedule_day {
+    display: inline-block;
+    background: #F0F0F0;
+    margin: 0px;    
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    border-top: 1px solid #E0E0E0;    
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.x_panel.workout_panel {
+    display: inline-block;
+    background: #F0F0F0;
+    margin: 0px;    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    border-top: 1px solid #E0E0E0;    
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.col-md-4.left_column {
+    padding-left: 0px;
+    padding-right: 40px;
+}
+
+.col-md-4.middle_column {
+    padding: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.col-md-4.right_column {
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
+.schedule_day_shortdesc {
+    margin-top: 10px;
+}
+
+.nav-sm .pagination-container .subcontainer {
+    margin-left: 70px;
+    margin-right: 200px;
+}
+
+.nav-hidden .pagination-container .subcontainer {
+    margin-left: 70px;
+    margin-right: 200px;
+}
+
+@media (max-width: 767px) and (min-width: 0px) { 
+    .col-md-4.right_column {
+        padding-left: 0px;
+    }
+    .schedule_day_shortdesc {
+        height: 0;
+        padding: 0;
+        padding-bottom: 10px;
+        margin: 0;
+        visibility: hidden
+    }    
+    .schedule_day_label {
+        height: 0;
+        padding: 0;
+        margin: 0;
+        visibility: hidden
+    }
+    .col-md-4.left_column {
+        padding: 0px;
+    }    
+    .col-md-4.right_column {
+        padding: 0px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-sm .nav.navbar-nav.quick-start {
+        display: none
+    }
+    .nav-hidden .nav.navbar-nav.quick-start {
+        display: none
+    }
+
+    .nav-sm .pagination-container .subcontainer {
+        margin-left: 0px;
+        margin-right: 200px;
+    }
+
+    .nav-hidden .pagination-container .subcontainer {
+        margin-left: 0px;
+        margin-right: 200px;
+    }
+}
+
+@media (max-width: 599px) and (min-width: 0px) {       
+    .dashboard_today_content {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #thumbnail-views {
+        top: 10px;        
+    }
+    .schedule_controls {
+        padding: 0px;        
+        text-align: center;
+    }
+    .schedule_controls .title {
+        padding-bottom: 5px;
+    }
+    .schedule_controls .jumpTo {
+        margin-top: 0;
+    }
+    .schedule_controls .jumpTo .mybutton-group {
+        border-radius: 0px;
+    }
+    #scheduleForLabel {
+        font-size: 16px;
+        display: block;
+    }
+    #scheduleDate {
+        font-size: 20px;
+        color: #fff;
+        display: block;
+    }    
+    #workoutsTitle {
+        font-size: 20px;
+        color: #fff;
+        line-height: 30px;
+        margin-left: 0px;
+    }
+
+    .result_count {
+        padding: 0 1em;
+        font-size: 13px;
+        line-height: 24px;        
+        position: absolute;
+        margin-left: 15px;
+        margin-top: 1px;
+    }
+
+    .schedule_controls .archive-link:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .schedule_controls .archive-link {
+        font-family: Rajdhani;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 0;
+        line-height: 54px;
+        float: none !important;
+        text-align: center;
+        max-width: 100%;
+        border: none;
+        color: #fff;
+        display: block;
+        background: #606060
+    }
+    .archive-link img {
+        width: 24px;
+        height: 24px;
+        top: -1px;
+        margin-right: 10px;
+        position: relative;
+    }
+    .row.no-margin.top_area {
+        background: #505050;
+    }    
+    .dashboard-card {
+        min-height: 300px;
+    }
+    .x_panel {
+        padding: 0px;
+    }
+    .col-today-workout-desc {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .col-today-workout-video {
+        padding-right: 0px;
+        padding-left: 0px;
+    }   
+    .col-md-4.thumbnail_container {
+        width: 50%; 
+        padding-left: 5px;
+        padding-right: 5px;
+    }    
+    .nav_menu.with-opacity {
+        background-color: rgba(230, 138, 3, 1);
+    }
+    body .container.body .background_container {            
+        background: none;
+        background-image: none;
+        background-color: #505050;
+    }
+    .col-sm-6 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .layoutHeader,
+    .x_panel.wod_schedule_day,
+    .x_panel.workout_panel {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+.card-view {
+    transition: all 0.2s ;
+    cursor: pointer
+}
+.card-view .mask {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+.card-view:hover {
+    transform: scale(1.0);
+}
+
+.card-view:hover .mask {
+    opacity: 1
+}
+
+.card-view .mask,
+.card-view .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.play-button {
+    display: block;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;    
+    left: 40%;
+    top: 40%;
+    width: 20%;
+    height: 20%;
+}
+
+.play-button img {
+    width: 100%;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: Rajdhani-Semibold;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-card {
+    transition: all 0.2s ;
+    cursor: pointer;
+    background-color: #fff;
+    min-height: 350px;
+}
+
+.dashboard-card:hover {
+    -ms-transform: translate(0px, -10px); /* IE 9 */
+    -webkit-transform: translate(0px, -10px); /* Safari */
+    transform: translate(0px, -10px);
+}
+
+a {
+    cursor: pointer;
+}
+
+.pagination-container {
+    margin: 0 !important; 
+    background: rgba(247,247,247,0.95); 
+    vertical-align: top; 
+    outline: none; 
+    display: block; 
+    position: fixed; 
+    bottom: 0; 
+    margin-right: 200px;
+    width: 100%;
+}
+
+.topbar-container {
+    margin: 0; 
+    background: rgba(247,247,247,0.95); 
+    vertical-align: top; 
+    outline: none; 
+    display: block; 
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+}
+
+.nav-sm .pagination-container {
+    left: 35px;
+}
+
+.nav-hidden .pagination-container {
+    left: 0;
+}

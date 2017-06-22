@@ -1,0 +1,200 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 20, 2017, 5:38:38 PM
+    Author     : mac
+*/
+
+.columns {
+    float: left;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+@media (max-width: 992px) and (min-width: 0px) {     
+    .large-4 {
+        width: 50%;
+    }
+}
+
+.video-card {
+    margin-bottom: 1rem;
+}
+
+.video-card .card-inner {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: top .2s, box-shadow .2s;
+    -moz-transition: top .2s, box-shadow .2s;
+    -webkit-transition: top .2s, box-shadow .2s;
+    -o-transition: top .2s, box-shadow .2s;    
+    border-radius: 2px;
+    overflow: hidden;
+    min-height: 200px;
+    text-align: left;
+}
+
+.video-card .card-inner:hover { 
+    -ms-transform: translate(0px, -2px); /* IE 9 */
+    -webkit-transform: translate(0px, -2px); /* Safari */
+    transform: translate(0px, -2px);
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.13)
+}
+
+.video-card .video-thumbnail {
+    position: relative;
+}
+
+.video-thumbnail .player_play_btn {
+    height: 48px;
+    width: 72px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP4AAACiCAYAAABh2nDdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAulJREFUeNrs3d1tGlEQBtAlSgEpgXSAO8AdxB2QDuwONhWQDpxUAB14OyAdmA5IB+SOvDdCSHnLn/WdI91XP4z1aYY77DIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAvnc/nQzsrlYCs4JdTOxvVgKzgd7t23qkKZAW/PLezVhnICn43qg7kBb88tbNUJcgKfr/4+6BSkBX8buviD/KCf7bzh8zgd/cqB3nBt/OH0OD3i7+1KkJW8O38ITj4/eJvqaKQFXw7fwgNfvfo4i/PQgleV/D/0J8+tnO3WCy+qXKGN0pAU5/3D3b+Oj5ZHf/SNHf/7yqu45Nj3Y7n/AWfQHXZV4/5bpXCqE/GqH+tLvw+uvjT8cmymrv/Ril0fHI6/qX93P1d/Ak+QcEvx8HO36hPnOXwsvMflULHJ6fjX5oGO38dnzjr4WXn72EfwSdM7fx3XvBp1Cdn1L9m56/jE6jv/D3so+MT1PEv2fnr+ASqC7+Dh30EnzzLefQflcKoT8aof60u/Grnf/Sf1PHJsZpHfzt/wSfMz52/Ugg+WWrk/6oMgk+OL+3c+oLPv/dWCfgLapdfO/29Uuj4ZJjauRF6wSfHpxb4Wys8oz4ZjvNoPymFjk+G/TzaC73gE6Au8B5a4L2Rx6hPCM/h6/iE+dwCfyP0Oj45o73dvOATZBq8XdeoT5S+mxd6HZ8Ax8Ev6Oj4ROm7eaEXfAL0Czyf5436hPCqLB2fMH03L/Q6PiGj/Z3v2ev45Kiwvxd6wSfHg908/KfOv1+97nqlspAT/Ec/aw05wT/5UQvICn6N9kuVhJzgjyoIOcE/+alqyAr+zgUe5AS/uvy9ikFO8O3mISz4W6M95ATfbh7Cgv9kNw9ZwR9VBXKC/+wCD7KCbzcPYcHfqAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvE4/BBgAB9Vp0xXzB8AAAAAASUVORK5CYII=") 0% 0%/72px 48px rgba(255,179,0,0.8);
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -24px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.video-card .card-inner:hover .video-thumbnail .player_play_btn {
+    width: 90px;
+    height: 60px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP4AAACiCAYAAABh2nDdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAulJREFUeNrs3d1tGlEQBtAlSgEpgXSAO8AdxB2QDuwONhWQDpxUAB14OyAdmA5IB+SOvDdCSHnLn/WdI91XP4z1aYY77DIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAvnc/nQzsrlYCs4JdTOxvVgKzgd7t23qkKZAW/PLezVhnICn43qg7kBb88tbNUJcgKfr/4+6BSkBX8buviD/KCf7bzh8zgd/cqB3nBt/OH0OD3i7+1KkJW8O38ITj4/eJvqaKQFXw7fwgNfvfo4i/PQgleV/D/0J8+tnO3WCy+qXKGN0pAU5/3D3b+Oj5ZHf/SNHf/7yqu45Nj3Y7n/AWfQHXZV4/5bpXCqE/GqH+tLvw+uvjT8cmymrv/Ril0fHI6/qX93P1d/Ak+QcEvx8HO36hPnOXwsvMflULHJ6fjX5oGO38dnzjr4WXn72EfwSdM7fx3XvBp1Cdn1L9m56/jE6jv/D3so+MT1PEv2fnr+ASqC7+Dh30EnzzLefQflcKoT8aof60u/Grnf/Sf1PHJsZpHfzt/wSfMz52/Ugg+WWrk/6oMgk+OL+3c+oLPv/dWCfgLapdfO/29Uuj4ZJjauRF6wSfHpxb4Wys8oz4ZjvNoPymFjk+G/TzaC73gE6Au8B5a4L2Rx6hPCM/h6/iE+dwCfyP0Oj45o73dvOATZBq8XdeoT5S+mxd6HZ8Ax8Ev6Oj4ROm7eaEXfAL0Czyf5436hPCqLB2fMH03L/Q6PiGj/Z3v2ev45Kiwvxd6wSfHg908/KfOv1+97nqlspAT/Ec/aw05wT/5UQvICn6N9kuVhJzgjyoIOcE/+alqyAr+zgUe5AS/uvy9ikFO8O3mISz4W6M95ATfbh7Cgv9kNw9ZwR9VBXKC/+wCD7KCbzcPYcHfqAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvE4/BBgAB9Vp0xXzB8AAAAAASUVORK5CYII=") 0% 0%/90px 60px rgba(255,179,0,0.85);
+    margin-left: -45px;
+    margin-top: -30px;    
+}
+
+.video-card .video-thumbnail .label_new {
+    background: #ffb300;
+    color: #fff;
+    position: absolute;
+    top: 4%;
+    left: 2.5%;
+    text-transform: uppercase;
+    padding: 0px 5px 1px 5px;
+    border-radius: 1px;
+    font-size: 10px;
+}
+
+.video-card .video-thumbnail .player_duration {
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    position: absolute;
+    top: auto;
+    bottom: 7.5%;
+    left: 4%;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 1px;
+    font-size: 10px;
+}
+
+.video-thumbnail img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.video-card .video_meta {
+    position: relative;
+}
+
+.video-card .video_meta .title_desc {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.video-card .video_meta .title {
+    font-family: Rajdhani-Semibold;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #555;
+    text-transform: uppercase;
+    max-height: 29px;
+    overflow: hidden;
+}
+
+.video-card .video_meta .description {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    height: 45px;
+    max-height: 45px;
+    overflow: hidden;
+}
+
+.video-card .video_meta a {
+    color: #333;
+}
+
+.video-card .video_poses {
+    border-top: 1px solid #f2f2f2;
+    padding: 10px 5%;
+    background: #fbfbfb;
+}
+
+.video_poses {
+    list-style: none;
+    margin: 0px;
+}
+
+.video-card .video_poses .contain {
+    height: 40px;
+    max-height: 36px;
+    overflow: hidden;
+}
+
+.video_poses .pose {
+    background: #00B6EC;
+    color: #fff;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 0 7px;
+    margin: 0px 4px 4px 0px;
+    float: left;
+    line-height: 16px;
+    font-size: 10px;
+    max-height: 16px;
+    overflow: hidden;
+}
+
+.video_poses .pose.has-tutorial a img {
+    width: 12px;
+    height: auto;
+    margin: auto;
+    padding: 0px;
+    position: relative;
+    margin-left: 5px;
+    opacity: 0.2;
+    border: 0;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+.video_poses .pose.has-tutorial:hover a img {
+    opacity: 0.5;
+}
+
+.video_poses .pose a {
+    color: #fff;
+}
