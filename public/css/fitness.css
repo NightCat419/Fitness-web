@@ -1,3 +1,8 @@
+.right_col {
+    color: #fff;
+    text-align: center;
+}
+
 .nav_menu.with-opacity {    
     background: rgba(255, 192, 0, 0.8);
 }
@@ -79,7 +84,7 @@ body .container.body .background_container {
 .schedule_controls {    
     display: block;
     width: 100%;
-    padding: 2em 5% 2.5em 5%;
+    padding: 15px 5% 25px 5%;
 }
 
 .layoutHeader {
@@ -91,9 +96,30 @@ body .container.body .background_container {
 #workoutsTitle {
     font-family: Rajdhani-SemiBold;
     font-size: 24px;
-    color: #303030;
+    color: #e78b06;
     line-height: 40px;
     margin-left: 8px;
+    text-transform: uppercase
+}
+
+.video-title {
+    padding-left: 15px; 
+    padding-right: 15px; 
+    padding-bottom: 8px; 
+    padding-top: 10px;
+    font-family: Rajdhani-Semibold;
+    font-size: 18px;
+    color: #e78b06;
+    text-transform: uppercase;
+}
+
+.video-desc {
+    padding-left: 15px; 
+    padding-right: 15px; 
+    padding-bottom: 8px; 
+    padding-top: 0px;
+    font-size: 13px;
+    color: #303030;
 }
 
 .result_count {
@@ -107,7 +133,8 @@ body .container.body .background_container {
     margin-left: 15px;
     margin-top: 3px;
     vertical-align: middle;
-    text-align: center;
+    text-align: center;    
+    color: #303030;
     display: inline-block;
 }
 
@@ -125,6 +152,13 @@ body .container.body .background_container {
 
 .archive-link {
     float: right;
+}
+
+.video_meta_line {
+     padding: 0px; 
+     margin: 0px; 
+     margin-top: 8px; 
+     border-top: 1px solid rgba(0, 0, 0, 0.05)
 }
 
 .archive-link img {
@@ -179,6 +213,10 @@ body .container.body .background_container {
     width: 100%;
     margin: 0;
     text-align: center;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;    
 }
 
 .schedule_controls .jumpTo .mybutton {
@@ -247,7 +285,6 @@ body .container.body .background_container {
     margin: 0px;    
     margin-left: auto;
     margin-right: auto;
-    max-width: 1000;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 20px;
@@ -302,6 +339,10 @@ body .container.body .background_container {
     margin-right: 200px;
 }
 
+.top_nav .navbar-right {
+    display: none;
+}
+
 @media (max-width: 767px) and (min-width: 0px) { 
     .col-md-4.right_column {
         padding-left: 0px;
@@ -344,6 +385,10 @@ body .container.body .background_container {
     .nav-hidden .pagination-container .subcontainer {
         margin-left: 0px;
         margin-right: 200px;
+    }
+    
+    .top_nav .navbar-right {    
+        display: block;
     }
 }
 
@@ -391,6 +436,7 @@ body .container.body .background_container {
         position: absolute;
         margin-left: 15px;
         margin-top: 1px;
+        color: #fff;
     }
 
     .schedule_controls .archive-link:hover {
@@ -463,6 +509,21 @@ body .container.body .background_container {
 @font-face {
     font-family: Rajdhani;
     src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
 }
 
 .card-view {
@@ -566,4 +627,166 @@ a {
 
 .nav-hidden .pagination-container {
     left: 0;
+}
+
+.relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    margin: 0;
+    list-style-type: none;
+    line-height: 1.6;
+}
+
+.UserMenuWrapper {
+    display: block;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 0;
+    height: 58px;
+    background: linear-gradient(to right, #ffb300 50%, #ffc21a 100%)
+}
+
+.UserMenuWrapper.no_background {
+    background: none;
+}
+
+.float-left {
+    float: left;
+}
+
+.user-gravatar {
+    width: 58px;
+    height: 58px;
+    padding: 0px !important;
+    overflow: hidden;
+    display: block;
+}
+
+.user-session-controls {
+    padding-left: 16px;  
+}
+
+.UserMenuWrapper h5,
+.UserMenuWrapper a {
+    font-family: Rajdhani-Semibold;
+    font-size: 16px;
+    color: #b7830a;
+    padding-top: 12px;
+    margin-bottom: 0px;
+    width: 100%;
+    display:block;
+    max-height: 32px;
+    max-width: 110px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.UserMenuWrapper a {
+    color: #fff;
+    padding: 0;    
+    text-transform: uppercase; 
+}
+
+.user-gravatar img {
+    width: 58px;
+    height: 58px;
+}
+
+.add-favorite {
+    margin-top: 0;    
+    background-color: #323233;
+    padding: 2em 1em !important;
+}
+
+.add-favorite p {
+    padding: 0;
+    font-family: Roboto-Light;    
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    text-align: center;
+    padding: .5em 0;
+}
+
+.add-favorite button {
+    background: none;
+    border: 1px solid #FCB22B;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 3px;
+    padding: 8px 0;
+    font-family: Rajdhani;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.add-favorite button:hover {
+    background: #FCB22B
+}
+
+.workout {
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.workout p {
+    color: #fff;
+    font-size: 16px;
+    padding: .5em 0;
+    font-family: Roboto-Light;    
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 1em;
+}
+
+ul#inthisworkout {
+    list-style-type: none;
+    margin: 0;
+}
+
+ul#inthisworkout .pose:first-of-type {
+    margin-top: .25em;
+}
+
+ul#inthisworkout .pose {
+    display: block;
+    background: #1ab7ea;
+    padding: 0em 1em;
+    margin: 5px 0;
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 1px;
+    max-height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+}
+
+ul#inthisworkout .pose div {
+    color: #fff;
+    font: Roboto-Light;    
+    cursor: pointer;
+}
+
+ul#inthisworkout .pose a {
+    color: #fff;
+    font: Roboto-Light;    
+    cursor: pointer;
+}
+
+ul#inthisworkout .pose a img {
+    width: 12px;
+    height: auto;
+    margin-left: 5px;
+    opacity: 0.2;
+}
+
+ul#inthisworkout .pose:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.2)
 }

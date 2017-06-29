@@ -8,6 +8,13 @@ use DB;
 
 class WorkoutsController extends Controller
 {
+    private $target_areas, $movements;
+    
+    public function __construct() {
+        $this->target_areas = DB::table('target_areas')->get();
+        $this->movements = DB::table('movements')->get();       
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +23,9 @@ class WorkoutsController extends Controller
     public function index()
     {
         $workouts = DB::table('workouts')->paginate(12);
-        return view('workouts', compact('workouts'));
+        return view('workouts', compact('workouts'))
+                ->with('target_areas', json_decode($this->target_areas, true))
+                ->with('movements', json_decode($this->movements, true));
     }
 
     /**

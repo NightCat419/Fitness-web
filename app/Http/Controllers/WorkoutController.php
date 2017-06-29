@@ -8,6 +8,13 @@ use DB;
 
 class WorkoutController extends Controller
 {
+    private $target_areas, $movements;
+    
+    public function __construct() {
+        $this->target_areas = DB::table('target_areas')->get();
+        $this->movements = DB::table('movements')->get();       
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -18,11 +25,18 @@ class WorkoutController extends Controller
         $workout_id = $request->segment(2);
         
         $workout = DB::table('workouts')->where('workout_id', '=', $workout_id)->get();
-        $relations = DB::table('relations')->where('workout_id', '=', $workout_id);
+        $relations = DB::table('relations')->where('workout_id', '=', $workout_id)->get();
+        $optional_requirements = DB::table('optional_requirements')->where('workout_id', '=', $workout_id)->get();
         
         if (!$workout->isEmpty()) {
-            return view('workout', ['workout' => compact($workout), 'relations' => compact($relations)]);
-        }
+            return view('workout')
+                    ->with('workout', json_decode($workout, true))
+                    ->with('relations', json_decode($relations, true))
+                    ->with('optional_requirements', json_decode($optional_requirements, true))
+                    ->with('target_areas', json_decode($this->target_areas, true))
+                    ->with('movements', json_decode($this->movements, true));
+        } else {
+        }        
     }
 
     /**

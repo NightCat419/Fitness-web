@@ -29,12 +29,12 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
 
     <div id="day1" class="x_panel wod_schedule_day">                
         <div class="col-md-4 left_column">
             <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 1</div>
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
+            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>            
             <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
         </div>  
         <div class="col-md-4 middle_column">
@@ -75,7 +75,7 @@
 
     <div id="day3" class="x_panel wod_schedule_day">                
         <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 3</div>
+            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 3</div>            
             <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
             <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
         </div>  
@@ -216,8 +216,10 @@
     </div>  
 </div>
 
-<div class="right_col">
 
-</div>
+@extends('layouts.right')
+@section('login_content')
+
+@endsection
 
 @endsection

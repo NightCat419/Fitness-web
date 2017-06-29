@@ -1,8 +1,12 @@
 .dropdown.filter {
     padding:0 0 0 0 0;
     float:left;
-    height: 600px;
+    height: 400px;
     background: #f4f4f4;
+}
+
+.dropdown.filter.scroll-view {
+    overflow: scroll
 }
 
 .dropdown.filterColumn {
@@ -57,7 +61,7 @@
 .dropdown.filterHeading h6 {
     font-size: 16px;
     margin-bottom: 0px;
-    font-family: Rajdhani;
+    font-family: Rajdhani-Medium;
     text-transform: uppercase;
     color: inherit;
     margin-top: 0;
@@ -126,7 +130,7 @@
 }
 
 #quickStart {
-    font-family: Rajdhani;
+    font-family: Rajdhani-Medium;
     font-size: 18px;
     
     padding: 16px;

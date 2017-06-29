@@ -22,7 +22,7 @@
     padding: 3px 20px;  
     background: #009fe8;
     border-radius: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .font_rajdhani_medium {
@@ -109,7 +109,7 @@
 
 .custom-title {
     margin-bottom: 0px;
-    font-family: Rajdhani;
+    font-family: Rajdhani-SemiBold;
     text-transform: uppercase;
     margin-top: 0;
 }

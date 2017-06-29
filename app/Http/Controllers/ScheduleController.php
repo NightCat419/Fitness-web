@@ -3,27 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use DB;
+use Session;
+use App\Helpers;
 
-class ScheduleController extends Controller
-{
+class ScheduleController extends Controller {
+
+    private $target_areas, $movements;
+
+    public function __construct() {
+        $this->target_areas = DB::table('target_areas')->get();
+        $this->movements = DB::table('movements')->get();
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
-        return view('schedule', ['number_of_day' => '#day5']);
+        return view('schedule', ['number_of_day' => '#day5', 'current_date' => \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s'))])
+                        ->with('target_areas', json_decode($this->target_areas, true))
+                        ->with('movements', json_decode($this->movements, true));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -33,8 +44,7 @@ class ScheduleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -44,8 +54,7 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -55,8 +64,7 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -67,8 +75,7 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -78,8 +85,7 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
 }

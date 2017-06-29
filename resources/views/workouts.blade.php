@@ -9,8 +9,7 @@
                 <div id="workoutsTitle">
                     WORKOUTS<span class="result_count">648 RESULTS</span>
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </div>  
 
@@ -85,7 +84,10 @@
     </div>
 </div>
 
-<div class="right_col">
-    
-</div>
+
+@extends('layouts.right')
+@section('login_content')
+
+@endsection
+
 @endsection

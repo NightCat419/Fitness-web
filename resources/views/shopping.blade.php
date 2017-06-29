@@ -8,4 +8,10 @@
     </div>
 </div>
 
+
+@extends('layouts.right')
+@section('login_content')
+
+@endsection
+
 @endsection

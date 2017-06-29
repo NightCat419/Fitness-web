@@ -22,3 +22,4 @@ Route::get('/favourite', 'FavouriteController@index')->name('favourite');
 Route::get('/shopping', 'ShoppingController@index')->name('shopping');
 
 Route::get('/workout/{id}', 'WorkoutController@index')->name('workout');
+Route::post('ajax/set_current_time_zone', array('as' => 'ajaxsetcurrenttimezone','uses' => 'HomeController@setCurrentTimeZone'));

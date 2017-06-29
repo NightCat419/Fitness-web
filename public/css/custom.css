@@ -428,7 +428,7 @@ html , body{
     margin-bottom: 10px;
     width: 100%;
     position: relative;
-    background: rgba(230, 138, 3, 1);
+    background: linear-gradient(to right, #ffb300 50%, #ffc21a 100%)
 }
 
 /*@media (min-width: 480px) {
@@ -805,7 +805,6 @@ a:focus {
 }
 .top_nav .navbar-right {
     margin: 0;
-    width: 70%;
     float: right
 }
 .top_nav .navbar-right li {
@@ -3487,13 +3486,6 @@ ul.project_files li a i {
 a.hiddenanchor {
     display: none
 }
-.login_wrapper {
-    right: 0px;
-    margin: 0px auto;
-    margin-top: 5%;
-    max-width: 350px;
-    position: relative
-}
 .registration_form,
 .login_form {
     position: absolute;
@@ -3587,6 +3579,7 @@ form:after {
     top: 10px;
     width: 27%
 }
+
 .login_content h1:after {
     background: #7e7e7e;
     background: linear-gradient(left, #7e7e7e 0%, #fff 100%);

@@ -3,9 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use DB;
 
 class ShoppingController extends Controller
 {
+    private $target_areas, $movements;
+    
+    public function __construct() {
+        $this->target_areas = DB::table('target_areas')->get();
+        $this->movements = DB::table('movements')->get();       
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +22,9 @@ class ShoppingController extends Controller
      */
     public function index()
     {
-        return view('shopping');
+        return view('shopping')
+                ->with('target_areas', json_decode($this->target_areas, true))
+                ->with('movements', json_decode($this->movements, true));
     }
 
     /**
