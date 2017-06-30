@@ -19,7 +19,7 @@
         </div>
     </div>
     @if(count($workout) > 0)
-        <div data-type="youtube" data-video-id="EFZ_d"></div>            
+        <div data-type="youtube" data-video-id="{{ $workout[0]['url'] }}"></div>            
     @else
         <div data-type="youtube" data-video-id=""></div>            
     @endif

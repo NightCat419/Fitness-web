@@ -126,6 +126,10 @@
     border-top: 3px solid #e78b06
 }
 
+.uppercase {
+    text-transform: uppercase
+}
+
 @font-face {
     font-family: Rajdhani;
     src: url(../fonts/Rajdhani-Regular.ttf);

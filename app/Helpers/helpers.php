@@ -28,8 +28,40 @@ class DateHelper {
         }
     }
     
-    public static function convertReadableFormat($dateString) {
+    public static function convertReadableFormat($dateString, $day = true, $year = false) {
         //return $dateString;
-        return date("l j M", strtotime($dateString));
+        if ($year == false) {
+            if ($day == true) {
+                return date("l, F j", strtotime($dateString));
+            } else {
+                return date("F j", strtotime($dateString));
+            }
+        } else {
+            if ($day == true) {
+                return date("l, F j, Y", strtotime($dateString));
+            } else {
+                return date("F j, Y", strtotime($dateString));
+            }
+        }
+    }
+    
+    public static function getDay($currentDate) {
+        $weekDay = date('N', strtotime($currentDate));
+        return $weekDay;
+    }
+    
+    public static function getWeekDays($currentDate, $day) {
+        $daysToMon = $day - 1;
+        $daysToSun = 7 - $day + 1;
+        
+        $results = array();
+        for ($d = $daysToMon; $d > 0; $d--) {
+            $results[] = date("Y-m-d", strtotime($currentDate . ' - ' . $d . ' days'));
+        }
+        
+        for ($d = 0; $d < $daysToSun; $d++) {
+            $results[] = date("Y-m-d", strtotime($currentDate . ' + ' . $d . ' days'));
+        }
+        return $results;
     }
 }

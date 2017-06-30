@@ -7,7 +7,7 @@
         <div class="col-md-12 schedule_controls">
             <div class="title" style="display: inline-block">
                 <span id="scheduleForLabel">SCHEDULE FOR:</span>
-                <span id="scheduleDate">JUNE 12 - JUNE 18, 2017</span>
+                <span id="scheduleDate" class="uppercase">{{ \Helpers\DateHelper::convertReadableFormat($weekDays[0], false, false) . ' - ' . \Helpers\DateHelper::convertReadableFormat($weekDays[6], false, true) }}</span>
             </div>
 
             <a class="archive-link" href="#">
@@ -25,195 +25,58 @@
                     <a class="mybutton" href="#day6">Sat</a>
                     <a class="mybutton" href="#day7">Sun</a>
 
-                    <a class="mybutton" href="#day7">Today</a>
+                    <a class="mybutton" href="#day{{ $number_of_day }}">Today</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="day1" class="x_panel wod_schedule_day">                
+    @foreach($workouts as $workout)
+    @if(array_key_exists('workout_id', $workout))
+    <div id="day{{ $workout['day_number'] }}" class="x_panel wod_schedule_day">                
         <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 1</div>
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>            
-            <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
+            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY {{ $workout['day_number'] }}</div>
+            <div class="font_rajdhani_semibold s16 darkblack uppercase">{{ \Helpers\DateHelper::convertReadableFormat($workout['date'], true, true) }}</div>            
+            <p class="schedule_day_shortdesc s13 middleblack">{{ $workout['short_desc'] }}</p>   
         </div>  
         <div class="col-md-4 middle_column">
-            <a href="#" class="card-view">
-                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
+            <a href="{{ route('workout', ['id' => $workout['workout_id']]) }}" class="card-view">
+                <img width="100%" src="{{ asset('images/workouts/' . $workout['thumbnail']) }}" alt="..." />
                 <div class="mask"></div>  
                 <div class="play-button">
                     <img src="{{ asset('images/common/play.png') }}" alt="..." />
                 </div>
+                <span class="video-duration uppercase">{{ $workout['minutes'] }} min</span>
             </a>
         </div>
         <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s26 darkblack">FROGS IN A SADDLE</div>
-            <p class="s13 middleblack">Today's lower body focused routine will have you working on your quads, ankles, knees, groin, glutes, IT band, hamstrings, and lower back.</p>   
-        </div>
-    </div>   
-
-    <div id="day2" class="x_panel wod_schedule_day">                
-        <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 2</div>
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
-            <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
-        </div>  
-        <div class="col-md-4 middle_column">
-            <a href="#" class="card-view">
-                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
-                <div class="mask"></div>  
-                <div class="play-button">
-                    <img src="{{ asset('images/common/play.png') }}" alt="..." />
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s26 darkblack">FROGS IN A SADDLE</div>
-            <p class="s13 middleblack">Today's lower body focused routine will have you working on your quads, ankles, knees, groin, glutes, IT band, hamstrings, and lower back.</p>   
-        </div>
-    </div>   
-
-    <div id="day3" class="x_panel wod_schedule_day">                
-        <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 3</div>            
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
-            <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
-        </div>  
-        <div class="col-md-4 middle_column">
-            <a href="#" class="card-view">
-                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
-                <div class="mask"></div>  
-                <div class="play-button">
-                    <img src="{{ asset('images/common/play.png') }}" alt="..." />
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s26 darkblack">FROGS IN A SADDLE</div>
-            <p class="s13 middleblack">Today's lower body focused routine will have you working on your quads, ankles, knees, groin, glutes, IT band, hamstrings, and lower back.</p>   
-        </div>
-    </div>   
-
-    <div id="day4" class="x_panel wod_schedule_day">                
-        <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 4</div>
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
-            <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
-        </div>  
-        <div class="col-md-4 middle_column">
-            <a href="#" class="card-view">
-                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
-                <div class="mask"></div>  
-                <div class="play-button">
-                    <img src="{{ asset('images/common/play.png') }}" alt="..." />
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s26 darkblack">FROGS IN A SADDLE</div>
-            <p class="s13 middleblack">Today's lower body focused routine will have you working on your quads, ankles, knees, groin, glutes, IT band, hamstrings, and lower back.</p>   
-        </div>
-    </div>  
-
-
-    <div id="day5" class="x_panel wod_schedule_day">                
-        <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 5</div>
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
-            <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
-        </div>  
-        <div class="col-md-4 middle_column">
-            <a href="#" class="card-view">
-                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
-                <div class="mask"></div>  
-                <div class="play-button">
-                    <img src="{{ asset('images/common/play.png') }}" alt="..." />
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s26 darkblack">FROGS IN A SADDLE</div>
-            <p class="s13 middleblack">Today's lower body focused routine will have you working on your quads, ankles, knees, groin, glutes, IT band, hamstrings, and lower back.</p>   
-        </div>
-    </div>  
-
-
-    <div id="day6" class="x_panel wod_schedule_day">                
-        <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 6</div>
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
-            <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
-        </div>  
-        <div class="col-md-4 middle_column">
-            <a href="#" class="card-view">
-                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
-                <div class="mask"></div>  
-                <div class="play-button">
-                    <img src="{{ asset('images/common/play.png') }}" alt="..." />
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s26 darkblack">FROGS IN A SADDLE</div>
-            <p class="s13 middleblack">Today's lower body focused routine will have you working on your quads, ankles, knees, groin, glutes, IT band, hamstrings, and lower back.</p>   
-        </div>
-    </div>  
-
-    <div id="day7" class="x_panel wod_schedule_day">                
-        <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY 7</div>
-            <div class="font_rajdhani_semibold s16 darkblack">MONDAY, JUNE 19, 2017</div>
-            <p class="schedule_day_shortdesc s13 middleblack">If you want something, go get it.</p>   
-        </div>  
-        <div class="col-md-4 middle_column">
-            <a href="#" class="card-view">
-                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
-                <div class="mask"></div>  
-                <div class="play-button">
-                    <img src="{{ asset('images/common/play.png') }}" alt="..." />
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s26 darkblack">FROGS IN A SADDLE</div>
-            <p class="s13 middleblack">Today's lower body focused routine will have you working on your quads, ankles, knees, groin, glutes, IT band, hamstrings, and lower back.</p>   
+            <div class="font_rajdhani_semibold s24 darkblack uppercase">{{ $workout['name'] }}</div>
+            <p class="s13 middleblack">{{ $workout['description'] }}</p>   
+            
             <br>
             <div class="video_poses clearfix">
                 <div class="contain">
-                    <div class="pose has-tutorial">
-                        <a href="#">
-                            Dragon
-                            <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                        </a>
-                    </div>
-                    <div class="pose has-tutorial">
-                        <a href="#">
-                            Dragon
-                            <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                        </a>
-                    </div>
-                    <div class="pose has-tutorial">
-                        <a href="#">
-                            Dragon
-                            <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                        </a>
-                    </div>
-                    <div class="pose has-tutorial">
-                        <a href="#">
-                            Dragon
-                            <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                        </a>
-                    </div>
-                    <div class="pose has-tutorial">
-                        <a href="#">
-                            Dragon
-                            <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                        </a>
-                    </div>
+                    @foreach($workout['relations'] as $relation)
+                        @if($relation['has_tutorial'] == true)
+                            <div class="pose has-tutorial">
+                                <a href="{{ route('workout', ['id' => $relation['relation_id']]) }}">
+                                    {{ $relation['relation_name'] }}
+                                    <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
+                                </a>
+                            </div>
+                        @else
+                            <div class="pose">
+                                {{ $relation['relation_name'] }}                                    
+                                <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
+                            </div>
+                        @endif
+                    @endforeach                    
                 </div>
             </div>
-        </div>
-    </div>  
+        </div>        
+    </div>
+    @endif
+    @endforeach  
 </div>
 
 

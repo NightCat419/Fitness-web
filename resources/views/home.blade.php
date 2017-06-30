@@ -14,7 +14,7 @@
                             <div class="thin-line"></div>
                             <br>
                             <div class="custom-title s36 white">{{ $today_workout['name'] }}</div>
-                            <div class="custom-title s24 yellow">{{ \Helpers\DateHelper::convertReadableFormat($current_date) }}</div>
+                            <div class="custom-title s24 yellow">{{ \Helpers\DateHelper::convertReadableFormat($current_date, true, true) }}</div>
                             <br>                      
                             <p class="s13 lightwhitecolor">{{ $today_workout['description'] }}</p>                        
                             <br>

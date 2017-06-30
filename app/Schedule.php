@@ -10,10 +10,8 @@ class Schedule extends Model
     protected $table = 'schedule';    
     public $timestamps = false; 
     
-    // return today workout
-    public static function getTodayWorkout() {
-        $today_date = \Helpers\DateHelper::getLocalUserDate(date('Y-m-d h:i:s'));        
-        $schedules = Schedule::where('date', $today_date)->get();
+    public static function getWorkout($date) {
+        $schedules = Schedule::where('date', $date)->get();
         
         if (!$schedules->isEmpty()) {
             $workout_id = $schedules[0]->workout_id;
@@ -22,6 +20,7 @@ class Schedule extends Model
             if (!$workouts->isEmpty()) {
                 $results = json_decode($workouts[0], true);
                 $relations = Relations::where('workout_id', $workout_id)->get();
+                $results['short_desc'] = $schedules[0]->description;
                 $results['relations'] = json_decode($relations, true);
                 
                 return $results;
@@ -31,5 +30,24 @@ class Schedule extends Model
         } else {
             return array();
         }
+    }
+    // return today workout
+    public static function getTodayWorkout() {
+        $today_date = \Helpers\DateHelper::getLocalUserDate(date('Y-m-d h:i:s'));        
+        return Schedule::getWorkout($today_date);
+    }
+    
+    public static function getScheduledWorkouts($weekDays) {
+        $results = array();        
+        $day = 1;
+        foreach($weekDays as $date) {
+            $workout = Schedule::getWorkout($date);            
+            $workout['day_number'] = $day;
+            $workout['date']  = $date;
+            
+            $results[] = $workout;
+            $day++;
+        }
+        return $results;
     }
 }

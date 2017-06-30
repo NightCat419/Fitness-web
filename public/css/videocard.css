@@ -173,13 +173,13 @@ and open the template in the editor.
     margin: 0px 4px 4px 0px;
     float: left;
     line-height: 16px;
-    font-size: 10px;
+    font-size: 11px;
     max-height: 16px;
     overflow: hidden;
 }
 
 .video_poses .pose.has-tutorial a img {
-    width: 12px;
+    width: 14px;
     height: auto;
     margin: auto;
     padding: 0px;

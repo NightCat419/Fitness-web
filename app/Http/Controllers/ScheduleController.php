@@ -24,9 +24,15 @@ class ScheduleController extends Controller {
      */
     public function index() {
         //
-        return view('schedule', ['number_of_day' => '#day5', 'current_date' => \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s'))])
+        $currentDate = \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s'));
+        $day = \Helpers\DateHelper::getDay($currentDate);
+        $weekDays = \Helpers\DateHelper::getWeekDays($currentDate, $day);        
+        $workouts = \App\Schedule::getScheduledWorkouts($weekDays);
+        
+        return view('schedule', ['number_of_day' => $day, 'current_date' => $currentDate, 'weekDays' => $weekDays])
                         ->with('target_areas', json_decode($this->target_areas, true))
-                        ->with('movements', json_decode($this->movements, true));
+                        ->with('movements', json_decode($this->movements, true))
+                        ->with('workouts', $workouts);
     }
     
     /**
