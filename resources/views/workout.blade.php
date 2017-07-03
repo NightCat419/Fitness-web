@@ -6,7 +6,7 @@
 
 <div class="main_col">
     <div class="row no-margin top_area">
-        <div class="layoutHeader" style="margin: 0px; padding: 0px; padding-bottom: 8px;">
+        <div class="layoutHeader" style="margin: 0px; padding: 0px; padding-bottom: 8px; padding-top: 8px">
             <div class="title">
                 <div id="workoutsTitle" style="margin: 0px; padding: 0px; padding-left: 15px">
                     @if(count($workout) > 0)
