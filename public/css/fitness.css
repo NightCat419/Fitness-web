@@ -405,6 +405,7 @@ body {
         text-align: center;
     }
     .schedule_controls .title {
+        padding-top: 5px;
         padding-bottom: 5px;
     }
     .schedule_controls .jumpTo {

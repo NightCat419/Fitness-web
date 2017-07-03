@@ -74,21 +74,21 @@
                                             <img src="{{ asset('images/sidemenu/yoga.png') }}"></img>
                                         </a>
                                     </li>
-                                    <li title = "Course">
+<!--                                    <li title = "Course">
                                         <a href="{{ route('path') }}">
                                             <img src="{{ asset('images/sidemenu/roadmap.png') }}"></img>
                                         </a>
-                                    </li>
+                                    </li>-->
                                     <li title = "Favourites">
                                         <a href="{{ route('favourite') }}">
                                             <img src="{{ asset('images/sidemenu/star.png') }}"></img>
                                         </a>
                                     </li>
-                                    <li title = "Shopping">
+<!--                                    <li title = "Shopping">
                                         <a href="{{ route('shopping') }}">
                                             <img src="{{ asset('images/sidemenu/cart.png') }}"></img>
                                         </a>
-                                    </li>
+                                    </li>-->
                                     <li title = "Help"><a><img src="{{ asset('images/sidemenu/help.png') }}"></img></a></li>
                                     <li title = "Setting"><a><img src="{{ asset('images/sidemenu/setting.png') }}"></img></a></li>
                                 </ul>
