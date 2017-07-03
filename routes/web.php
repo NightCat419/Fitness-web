@@ -23,5 +23,7 @@ Route::get('/shopping', 'ShoppingController@index')->name('shopping');
 Route::get('/schedule/past', 'ScheduleController@pastschedule')->name('pastschedule');
 Route::get('/schedule/{id}', 'ScheduleController@schedule_by_date')->name('schedule_by_date');
 
+Route::get('/workouts/search', 'WorkoutsController@search')->name('workouts_search');
+
 Route::get('/workout/{id}', 'WorkoutController@index')->name('workout');
 Route::post('ajax/set_current_time_zone', array('as' => 'ajaxsetcurrenttimezone','uses' => 'HomeController@setCurrentTimeZone'));

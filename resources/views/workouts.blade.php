@@ -22,7 +22,7 @@
                         <a href="{{ route('workout', ['id' => $workout['workout_id']]) }}">
                             <img src="{{ asset("images/dashboard/" . $workout['thumbnail']) }}">
                         </a>
-                        <a class="player_play_btn" href="#"></a>
+                        <a class="player_play_btn" href="{{ route('workout', ['id' => $workout['workout_id']]) }}"></a>
                         <span class="label_new">new</span>
                         <span class="player_duration">{{ $workout['minutes'] }} min</span>
                     </div>

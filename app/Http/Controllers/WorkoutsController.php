@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+
 use App\Http\Requests;
 use DB;
 
@@ -42,6 +44,43 @@ class WorkoutsController extends Controller
                 ->with('links', $workouts->links('vendor.pagination.custom'));
     }
 
+    public function search(Request $request) {
+        if ($request->has("area")) {
+            $area = $request->get("area");
+            $workouts = \App\Workouts::where('area', $area)->paginate(12);
+        } else if ($request->has("movement")) {
+            $movement = $request->get("movement");
+            $workouts = \App\Workouts::where('movement', $movement)->paginate(12);
+        } else if ($request->has("min_duration")) {
+            $min_duration = $request->get("min_duration");
+            if ($request->has("max_duration")) {
+                $max_duration = $request->get("max_duration");
+                $workouts = \App\Workouts::where('minutes', '>=', $min_duration)->where('minutes', '<=', $max_duration)->paginate(12);
+            } else {
+                $workouts = \App\Workouts::where('minutes', '>=', $min_duration)->paginate(12);
+            }            
+        } else {
+            $workouts = \App\Workouts::paginate(12);
+        }
+        
+        $total_count = $workouts->total();        
+        $decoded_workouts = array();
+        foreach($workouts as $workout) {
+            $decoded_workout = json_decode($workout, true);
+            $workout_id = $decoded_workout['workout_id'];
+            $decoded_workout['relations'] = \App\Relations::getRelatedWorkouts($workout_id);  
+            
+            $decoded_workouts[] = $decoded_workout;
+        }        
+        
+        return view('workouts')
+                ->with('total_count', $total_count)
+                ->with('workouts', $decoded_workouts)
+                ->with('target_areas', json_decode($this->target_areas, true))
+                ->with('movements', json_decode($this->movements, true))
+                ->with('links', $workouts->appends(Input::except('page'))->links('vendor.pagination.custom'));
+    }
+    
     /**
      * Show the form for creating a new resource.
      *

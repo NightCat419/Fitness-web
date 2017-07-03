@@ -122,7 +122,7 @@
                                                 <div class="dropdown filter-options">
                                                     @foreach($target_areas as $target_area)                                                        
                                                     <ul class="dropdown-columns one">
-                                                        <li><a href="#" class="s12">{{ $target_area['area'] }}</a></li>
+                                                        <li><a href="{{ route('workouts_search', ['area' => $target_area['area']]) }}" class="s12">{{ $target_area['area'] }}</a></li>
                                                     </ul>                                                        
                                                     @endforeach
                                                 </div>
@@ -136,7 +136,7 @@
                                                 <div class="dropdown filter-options">
                                                     @foreach($movements as $movement)                                                        
                                                     <ul class="dropdown-columns one">
-                                                        <li><a href="#" class="s12">{{ $movement['movement'] }}</a></li>
+                                                        <li><a href="{{ route('workouts_search', ['movement' => $movement['movement']]) }}" class="s12">{{ $movement['movement'] }}</a></li>
                                                     </ul>                                                        
                                                     @endforeach
                                                 </div>
@@ -149,16 +149,16 @@
                                                 </div>
                                                 <div class="dropdown filter-options">
                                                     <ul class="dropdown-columns one">
-                                                        <li><a href="#" class="s12">Under 15 Minutes</a></li>
+                                                        <li><a href="{{ route('workouts_search', ['min_duration' => 0, 'max_duration' => 15]) }}" class="s12">Under 15 Minutes</a></li>
                                                     </ul>
                                                     <ul class="dropdown-columns one">
-                                                        <li><a href="#" class="s12">15-20 Minutes</a></li>
+                                                        <li><a href="{{ route('workouts_search', ['min_duration' => 15, 'max_duration' => 20]) }}" class="s12">15-20 Minutes</a></li>
                                                     </ul>
                                                     <ul class="dropdown-columns one">
-                                                        <li><a href="#" class="s12">20-30 Minutes</a></li>
+                                                        <li><a href="{{ route('workouts_search', ['min_duration' => 20, 'max_duration' => 30]) }}" class="s12">20-30 Minutes</a></li>
                                                     </ul>
                                                     <ul class="dropdown-columns one">
-                                                        <li><a href="#" class="s12">30+ Minutes</a></li>
+                                                        <li><a href="{{ route('workouts_search', ['min_duration' => 30]) }}" class="s12">30+ Minutes</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
