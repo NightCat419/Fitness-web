@@ -40,7 +40,6 @@ and open the template in the editor.
     -o-transition: top .2s, box-shadow .2s;    
     border-radius: 2px;
     overflow: hidden;
-    min-height: 200px;
     text-align: left;
 }
 
@@ -120,15 +119,17 @@ and open the template in the editor.
     padding-right: 5%;
     padding-top: 15px;
     padding-bottom: 15px;
+    
+    min-height: 130px;
 }
 
 .video-card .video_meta .title {
     font-family: Rajdhani-Semibold;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.01em;
     color: #555;
     text-transform: uppercase;
-    max-height: 29px;
+    max-height: 40px;
     overflow: hidden;
 }
 

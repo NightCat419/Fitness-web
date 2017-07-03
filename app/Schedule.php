@@ -50,4 +50,11 @@ class Schedule extends Model
         }
         return $results;
     }
+    
+    public static function isScheduled($startDate, $endDate) {
+        $schedules = Schedule::where('date', '>=', $startDate)->where('date', '<=', $endDate)->get();
+        if ($schedules->isEmpty()) return false;
+        
+        return true;
+    }
 }

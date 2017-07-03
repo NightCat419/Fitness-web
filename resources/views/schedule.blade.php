@@ -10,7 +10,7 @@
                 <span id="scheduleDate" class="uppercase">{{ \Helpers\DateHelper::convertReadableFormat($weekDays[0], false, false) . ' - ' . \Helpers\DateHelper::convertReadableFormat($weekDays[6], false, true) }}</span>
             </div>
 
-            <a class="archive-link" href="#">
+            <a class="archive-link" href="{{ route('pastschedule') }}">
                 <img src="{{ asset('images/common/icon-pastwods.svg') }}"/>
                 Past Schedules
             </a>

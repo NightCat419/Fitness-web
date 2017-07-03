@@ -64,4 +64,66 @@ class DateHelper {
         }
         return $results;
     }
+    
+    public static function getScheduleDays($currentDate) {
+        $year = date('Y', strtotime($currentDate));
+        $weekNumber = DateHelper::getIsoWeeksInYear($year);
+        
+        $results = array();        
+        for ($week = 1; $week <= $weekNumber; $week++) {
+            $startDate = DateHelper::getStartDateByWeek(sprintf("%02d", $week), $year);
+            $endDate = DateHelper::getEndDateByWeek(sprintf("%02d", $week), $year);
+            
+            if ($week == 1) {
+                if ($startDate > "$year-01-01") {
+                    $day = date("d", strtotime($startDate));
+                    $day--;
+                    $day = sprintf("%02d", $day);
+                   
+                    if (\App\Schedule::isScheduled("$year-01-01", "$year-01-$day")) {
+                        $results[] = array('start' => "$year-01-01", 'end' => "$year-01-$day");
+                    }
+                } else if ($startDate < "$year-01-01") {
+                    $startDate = "$year-01-01";
+                }
+            }
+            
+            if ($startDate <= $currentDate) {
+                if (\App\Schedule::isScheduled($startDate, $endDate)) {
+                    $results[] = array('start' => $startDate, 'end' => $endDate);   
+                }
+
+                if ($week == $weekNumber) {
+                    if ($endDate < "$year-12-31") {
+                        $day = date("d", strtotime($endDate));
+                        $day++;
+                        $day = sprintf("%02d", $day);
+                        
+                        if (\App\Schedule::isScheduled("$year-12-$day", "$year-12-31")) {
+                            $results[] = array('start' => "$year-12-$day", 'end' => "$year-12-31");
+                        }
+                    } else if ($endDate > "$year-12-31") {
+                        $endDate = "$year-12-31";
+                    }
+                }
+            }
+        }
+        return $results;
+    }
+    
+    public static function getIsoWeeksInYear($year) {
+        $date = new \DateTime;
+        $date->setISODate($year, 53);
+        return ($date->format("W") === "53" ? 53 : 52);
+    }
+    
+    public static function getEndDateByWeek($week, $year) {
+        $date = date( "Y-m-d", strtotime($year."W".$week."7") ); // Last day of week
+        return $date;
+    }
+    
+    public static function getStartDateByWeek($week, $year) {
+        $date = date( "Y-m-d", strtotime($year."W".$week."1") ); // First day of week
+        return $date;
+    }
 }

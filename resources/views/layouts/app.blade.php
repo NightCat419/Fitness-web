@@ -165,8 +165,8 @@
                                         </div>                                        
                                     </div>
                                 </li>
-                            </div>
-
+                            </div>                            
+                                                        
                             <div class="nav navbar-nav navbar-right" style="padding-right: 15px">
                                 <li class="UserMenuWrapper no_background">
                                     <div class="UserMenu">

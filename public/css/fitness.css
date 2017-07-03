@@ -84,13 +84,13 @@ body .container.body .background_container {
 .schedule_controls {    
     display: block;
     width: 100%;
-    padding: 15px 5% 25px 5%;
+    padding: 20px 5% 20px 5%;
 }
 
 .layoutHeader {
     display: inline-block;
     width: 100%;
-    padding: 5px 5% 15px 5%;
+    padding: 10px 5% 10px 5%;
 }
 
 #workoutsTitle {
@@ -800,4 +800,38 @@ ul#inthisworkout .pose a img {
 
 ul#inthisworkout .pose:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.2)
+}
+
+.past-wod {
+    font-family: Rajdhani-Semibold;
+    font-size: 22px;
+    outline: none;
+    color: #555;
+    text-transform: uppercase;
+    display: block;
+    line-height: 90px;
+    overflow: hidden;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+}
+
+.past-wod span {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #555;
+}
+
+.past-wod:hover {
+    background: #fff;
+}
+
+.past-wod:hover span {
+    background: -webkit-linear-gradient(0deg, #5c5c5e 40%, #ffb300 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.05)
 }

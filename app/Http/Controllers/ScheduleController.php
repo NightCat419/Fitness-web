@@ -24,7 +24,7 @@ class ScheduleController extends Controller {
      */
     public function index() {
         //
-        $currentDate = \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s'));
+        $currentDate = \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s'));        
         $day = \Helpers\DateHelper::getDay($currentDate);
         $weekDays = \Helpers\DateHelper::getWeekDays($currentDate, $day);        
         $workouts = \App\Schedule::getScheduledWorkouts($weekDays);
@@ -33,6 +33,41 @@ class ScheduleController extends Controller {
                         ->with('target_areas', json_decode($this->target_areas, true))
                         ->with('movements', json_decode($this->movements, true))
                         ->with('workouts', $workouts);
+    }
+    
+    /**
+    * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pastschedule() {
+        //
+        $currentDate = \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s'));
+        
+        $scheduleDays = \Helpers\DateHelper::getScheduleDays($currentDate);
+        $scheduleDays = array_reverse($scheduleDays);
+        
+        return view('pastschedule', ['scheduleDays' => $scheduleDays, 'number_of_day' => 1])
+                        ->with('target_areas', json_decode($this->target_areas, true))
+                        ->with('movements', json_decode($this->movements, true));
+    }
+    
+    /**
+    * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function schedule_by_date(Request $request) {
+        //
+        $currentDate = $request->segment(2);
+        $day = \Helpers\DateHelper::getDay($currentDate);
+        $weekDays = \Helpers\DateHelper::getWeekDays($currentDate, $day);        
+        $workouts = \App\Schedule::getScheduledWorkouts($weekDays);
+        
+        return view('schedule', ['number_of_day' => $day, 'current_date' => $currentDate, 'weekDays' => $weekDays])
+                        ->with('target_areas', json_decode($this->target_areas, true))
+                        ->with('movements', json_decode($this->movements, true))
+                        ->with('workouts', $workouts);        
     }
     
     /**

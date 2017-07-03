@@ -22,10 +22,24 @@ class WorkoutsController extends Controller
      */
     public function index()
     {
-        $workouts = DB::table('workouts')->paginate(12);
-        return view('workouts', compact('workouts'))
+        $workouts = \App\Workouts::paginate(12);
+        $total_count = $workouts->total();
+        
+        $decoded_workouts = array();
+        foreach($workouts as $workout) {
+            $decoded_workout = json_decode($workout, true);
+            $workout_id = $decoded_workout['workout_id'];
+            $decoded_workout['relations'] = \App\Relations::getRelatedWorkouts($workout_id);  
+            
+            $decoded_workouts[] = $decoded_workout;
+        }        
+        
+        return view('workouts')
+                ->with('total_count', $total_count)
+                ->with('workouts', $decoded_workouts)
                 ->with('target_areas', json_decode($this->target_areas, true))
-                ->with('movements', json_decode($this->movements, true));
+                ->with('movements', json_decode($this->movements, true))
+                ->with('links', $workouts->links('vendor.pagination.custom'));
     }
 
     /**

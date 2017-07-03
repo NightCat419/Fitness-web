@@ -68,9 +68,7 @@
         @foreach($relations as $relation)
             @if($relation['has_tutorial'] == 0)
                 <li class="pose">
-                    <div>
-                        {{ $relation['relation_name'] }}
-                    </div>
+                    <div>{{ $relation['relation_name'] }}</div>
                 </li>
             @else
                 <li class="pose has-tutorial">

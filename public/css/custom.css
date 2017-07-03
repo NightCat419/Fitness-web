@@ -424,8 +424,7 @@ html , body{
 }
 .nav_menu {
     float: left;
-/*    border-bottom: 1px solid #D9DEE4;*/
-    margin-bottom: 10px;
+/*    border-bottom: 1px solid #D9DEE4;*/    
     width: 100%;
     position: relative;
     background: linear-gradient(to right, #ffb300 50%, #ffc21a 100%)

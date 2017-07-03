@@ -7,7 +7,7 @@
         <div class="layoutHeader">
             <div class="title">
                 <div id="workoutsTitle">
-                    WORKOUTS<span class="result_count">648 RESULTS</span>
+                    WORKOUTS<span class="result_count">{{ $total_count }} RESULTS</span>
                 </div>
             </div>            
         </div>
@@ -15,59 +15,46 @@
 
     <div class="x_panel workout_panel" style="margin-bottom: 70px;">
         <div class="pager" style="margin: 0px">                
-            @foreach($workouts as $key => $workout)
+            @foreach($workouts as $workout)
             <div class="col-md-3 col-sm-6 video-card">
                 <div class="card-inner">
                     <div class="video-thumbnail">
-                        <a href="#">
-                            <img src="{{ asset('images/dashboard/workout.jpg') }}">
+                        <a href="{{ route('workout', ['id' => $workout['workout_id']]) }}">
+                            <img src="{{ asset("images/dashboard/" . $workout['thumbnail']) }}">
                         </a>
                         <a class="player_play_btn" href="#"></a>
                         <span class="label_new">new</span>
-                        <span class="player_duration">24 min</span>
+                        <span class="player_duration">{{ $workout['minutes'] }} min</span>
                     </div>
                     
                     <div class="video_meta clearfix">
                         <div class="title_desc">
-                            <a href="#">
-                                <h6 class="title">Bet On You</h6>
+                            <a href="{{ route('workout', ['id' => $workout['workout_id']]) }}">
+                                <h6 class="title">{{ $workout['name'] }}</h6>
                             </a>
                             <p class="description">
-                                You are sure to win when you bet on yourself and when you do today's ROMWOD for your glutes, hips, hamstrings, IT band, lower back and groin.
+                                {{ $workout['description'] }}
                             </p>
                         </div>
                         <div class="video_poses clearfix">
                             <div class="contain">
-                                <div class="pose has-tutorial">
-                                    <a href="#">
-                                        Dragon
-                                        <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                                    </a>
-                                </div>
-                                <div class="pose has-tutorial">
-                                    <a href="#">
-                                        Dragon
-                                        <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                                    </a>
-                                </div>
-                                <div class="pose has-tutorial">
-                                    <a href="#">
-                                        Dragon
-                                        <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                                    </a>
-                                </div>
-                                <div class="pose has-tutorial">
-                                    <a href="#">
-                                        Dragon
-                                        <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                                    </a>
-                                </div>
-                                <div class="pose has-tutorial">
-                                    <a href="#">
-                                        Dragon
-                                        <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
-                                    </a>
-                                </div>
+                                @foreach($workout['relations'] as $relation)
+                                    @if($relation['has_tutorial']) 
+                                    <div class="pose has-tutorial">
+                                        <a href="{{ route('workout', ['id' => $relation['relation_id']]) }}">
+                                            {{ $relation['relation_name'] }}
+                                            <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
+                                        </a>
+                                    </div>
+                                    @else
+                                    <div class="pose">
+                                        <a href="{{ route('workout', ['id' => $relation['relation_id']]) }}">
+                                            {{ $relation['relation_name'] }}
+                                            <img src="{{ asset('images/common/icon-video.svg') }}" style="max-width: 12px">
+                                        </a>
+                                    </div>
+                                    @endif
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -79,7 +66,7 @@
     
     <div class="pagination-container">
         <div class="subcontainer">
-            {{ $workouts->links('vendor.pagination.custom') }} 
+            {{ $links }} 
         </div>
     </div>
 </div>
