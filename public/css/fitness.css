@@ -329,202 +329,18 @@ body {
     margin-top: 10px;
 }
 
-.nav-sm .pagination-container .subcontainer {
-    margin-left: 70px;
-    margin-right: 200px;
-}
-
-.nav-hidden .pagination-container .subcontainer {
-    margin-left: 70px;
-    margin-right: 200px;
-}
-
 .top_nav .navbar-right {
     display: none;
 }
 
-@media (max-width: 767px) and (min-width: 0px) { 
-    .col-md-4.right_column {
-        padding-left: 0px;
-    }
-    .schedule_day_shortdesc {
-        height: 0;
-        padding: 0;
-        padding-bottom: 10px;
-        margin: 0;
-        visibility: hidden
-    }    
-    .schedule_day_label {
-        height: 0;
-        padding: 0;
-        margin: 0;
-        visibility: hidden
-    }
-    .col-md-4.left_column {
-        padding: 0px;
-    }    
-    .col-md-4.right_column {
-        padding: 0px;
-        padding-top: 10px;
-    }
+.nav-sm .pagination-container {
+    left: 70px;
+    right: 200px;
 }
 
-@media (max-width: 767px) {
-    .nav-sm .nav.navbar-nav.quick-start {
-        display: none
-    }
-    .nav-hidden .nav.navbar-nav.quick-start {
-        display: none
-    }
-
-    .nav-sm .pagination-container .subcontainer {
-        margin-left: 0px;
-        margin-right: 200px;
-    }
-
-    .nav-hidden .pagination-container .subcontainer {
-        margin-left: 0px;
-        margin-right: 200px;
-    }
-    
-    .top_nav .navbar-right {    
-        display: block;
-    }
-}
-
-@media (max-width: 599px) and (min-width: 0px) {       
-    .dashboard_today_content {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    #thumbnail-views {
-        top: 10px;        
-    }
-    .schedule_controls {
-        padding: 0px;        
-        text-align: center;
-    }
-    .schedule_controls .title {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .schedule_controls .jumpTo {
-        margin-top: 0;
-    }
-    .schedule_controls .jumpTo .mybutton-group {
-        border-radius: 0px;
-    }
-    #scheduleForLabel {
-        font-size: 16px;
-        display: block;
-    }
-    #scheduleDate {
-        font-size: 20px;
-        color: #fff;
-        display: block;
-    }    
-    #workoutsTitle {
-        font-size: 20px;
-        color: #fff;
-        line-height: 30px;
-        margin-left: 0px;
-    }
-
-    .result_count {
-        padding: 0 1em;
-        font-size: 13px;
-        line-height: 24px;        
-        position: absolute;
-        margin-left: 15px;
-        margin-top: 1px;
-        color: #fff;
-    }
-
-    .schedule_controls .archive-link:hover {
-        color: #fff;
-        background: rgba(255, 255, 255, 0.2);
-    }
-    .schedule_controls .archive-link {
-        font-family: Rajdhani;
-        font-size: 18px;
-        text-transform: uppercase;
-        padding: 0;
-        line-height: 54px;
-        float: none !important;
-        text-align: center;
-        max-width: 100%;
-        border: none;
-        color: #fff;
-        display: block;
-        background: #606060
-    }
-    .archive-link img {
-        width: 24px;
-        height: 24px;
-        top: -1px;
-        margin-right: 10px;
-        position: relative;
-    }
-    .row.no-margin.top_area {
-        background: #505050;
-    }    
-    .dashboard-card {
-        min-height: 300px;
-    }
-    .x_panel {
-        padding: 0px;
-    }
-    .col-today-workout-desc {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-    .col-today-workout-video {
-        padding-right: 0px;
-        padding-left: 0px;
-    }   
-    .col-md-4.thumbnail_container {
-        width: 50%; 
-        padding-left: 5px;
-        padding-right: 5px;
-    }    
-    .nav_menu.with-opacity {
-        background-color: rgba(230, 138, 3, 1);
-    }
-    body .container.body .background_container {            
-        background: none;
-        background-image: none;
-        background-color: #505050;
-    }
-    .col-sm-6 {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .layoutHeader,
-    .x_panel.wod_schedule_day,
-    .x_panel.workout_panel {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-@font-face {
-    font-family: Rajdhani;
-    src: url(../fonts/Rajdhani-Regular.ttf);
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url(../fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Medium;
-    src: url(../fonts/Roboto-Medium.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Light;
-    src: url(../fonts/Roboto-Light.ttf);
+.nav-hidden .pagination-container {
+    left: 70px;
+    right: 200px;
 }
 
 .card-view {
@@ -617,9 +433,7 @@ a {
     outline: none; 
     display: block; 
     position: fixed; 
-    bottom: 0; 
-    margin-right: 200px;
-    width: 100%;
+    bottom: 0;
 }
 
 .topbar-container {
@@ -631,14 +445,6 @@ a {
     position: fixed; 
     top: 0; 
     width: 100%;
-}
-
-.nav-sm .pagination-container {
-    left: 35px;
-}
-
-.nav-hidden .pagination-container {
-    left: 0;
 }
 
 .relative {
@@ -835,4 +641,238 @@ ul#inthisworkout .pose:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(1.05)
+}
+
+.twitter-wrapper {
+    height: 50vh;
+    clear: both;
+    overflow-y: scroll;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0px -35px 35px -35px rgba(20, 20, 20, 0.9);
+    margin-right: -15px;    
+}
+
+.rotating-announcement {
+    height: auto;
+    margin: 0;
+    border-top: 1px solid #333;
+    padding: 1rem;
+}
+
+.rotating-announcement img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.dashboard-footer {
+    width: 100%;
+    text-align: enter;
+    color: #999;
+    padding: 1.5rem 1rem 80px 1rem;
+    position: absolute;
+    bottom: 0;
+    background: #292929;
+    box-shadow: 0px -35px 35px -35px rgba(20 20, 20, 0.45)
+}
+
+.dashboard-footer ul {
+    display: block;
+    margin: 0px;
+}
+
+.dashboard-footer ul li {
+    display: inline-block;
+}
+
+.dashboard-footer ul li a {
+    color: #737373;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) and (min-width: 0px) { 
+    .col-md-4.right_column {
+        padding-left: 0px;
+    }
+    .schedule_day_shortdesc {
+        height: 0;
+        padding: 0;
+        padding-bottom: 10px;
+        margin: 0;
+        visibility: hidden
+    }    
+    .schedule_day_label {
+        height: 0;
+        padding: 0;
+        margin: 0;
+        visibility: hidden
+    }
+    .col-md-4.left_column {
+        padding: 0px;
+    }    
+    .col-md-4.right_column {
+        padding: 0px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-sm .nav.navbar-nav.quick-start {
+        display: none
+    }
+    .nav-hidden .nav.navbar-nav.quick-start {
+        display: none
+    }
+
+    .nav-sm .pagination-container {
+        left: 70px;
+        right: 0px;
+    }
+
+    .nav-hidden .pagination-container {
+        left: 0px;
+        right: 0px;
+    }
+    
+    .top_nav .navbar-right {    
+        display: block;
+    }
+}
+
+@media (max-width: 599px) and (min-width: 0px) {       
+    .dashboard_today_content {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #thumbnail-views {
+        top: 10px;        
+    }
+    .schedule_controls {
+        padding: 0px;        
+        text-align: center;
+    }
+    .schedule_controls .title {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .schedule_controls .jumpTo {
+        margin-top: 0;
+    }
+    .schedule_controls .jumpTo .mybutton-group {
+        border-radius: 0px;
+    }
+    #scheduleForLabel {
+        font-size: 16px;
+        display: block;
+    }
+    #scheduleDate {
+        font-size: 20px;
+        color: #fff;
+        display: block;
+    }    
+    #workoutsTitle {
+        font-size: 20px;
+        color: #fff;
+        line-height: 30px;
+        margin-left: 0px;
+    }
+
+    .result_count {
+        padding: 0 1em;
+        font-size: 13px;
+        line-height: 24px;        
+        position: absolute;
+        margin-left: 15px;
+        margin-top: 1px;
+        color: #fff;
+    }
+
+    .schedule_controls .archive-link:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .schedule_controls .archive-link {
+        font-family: Rajdhani;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 0;
+        line-height: 54px;
+        float: none !important;
+        text-align: center;
+        max-width: 100%;
+        border: none;
+        color: #fff;
+        display: block;
+        background: #606060
+    }
+    .archive-link img {
+        width: 24px;
+        height: 24px;
+        top: -1px;
+        margin-right: 10px;
+        position: relative;
+    }
+    .row.no-margin.top_area {
+        background: #505050;
+    }    
+    .dashboard-card {
+        min-height: 300px;
+    }
+    .x_panel {
+        padding: 0px;
+    }
+    .col-today-workout-desc {
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 15px;
+    }
+    .col-today-workout-video {
+        padding-right: 0px;
+        padding-left: 0px;
+    }   
+    .col-md-4.thumbnail_container {
+        width: 50%; 
+        padding-left: 5px;
+        padding-right: 5px;
+    }    
+    .nav_menu.with-opacity {
+        background-color: rgba(230, 138, 3, 1);
+    }
+    body .container.body .background_container {            
+        background: none;
+        background-image: none;
+        background-color: #505050;
+    }
+    .col-sm-6 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .layoutHeader,
+    .x_panel.wod_schedule_day,
+    .x_panel.workout_panel {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
 }

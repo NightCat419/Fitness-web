@@ -23,7 +23,7 @@
 
                             <a class="logOut" style="text-align: left" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
+                                       document.getElementById('logout-form').submit();">
                                 Log Out
                             </a>
 
@@ -36,7 +36,8 @@
                     @endif
                 </div>
             </li>        
-        </ul>        
+        </ul>       
         @yield('login_content')
     </div>
+
 </div>
