@@ -25,7 +25,7 @@
     </div>
     @if(count($workout) > 0)
     <section>
-        <video poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" controls crossorigin>
+        <video poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" crossorigin controls style="width: 100%; height: auto">
             <source src=" {{ asset('videos/video.mp4') }}" type="video/mp4">
         </video>
     </section>    
