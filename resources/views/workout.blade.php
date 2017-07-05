@@ -24,9 +24,12 @@
         </div>
     </div>
     @if(count($workout) > 0)
-    <video poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" controls>
+    <div class="plyr__video-wrapper" style="cursor:pointer">
+        <video poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" controls crossorigin>
         <source src=" {{ asset('videos/video.mp4') }}" type="video/mp4">
     </video>
+    </div>
+    
         <input id="workout_id" type="hidden" value="{{ $workout[0]['workout_id'] }}">
     @endif
     <div class="row no-margin" style="padding-bottom: 10px;">
