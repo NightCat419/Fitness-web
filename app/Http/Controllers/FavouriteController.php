@@ -14,7 +14,7 @@ class FavouriteController extends Controller
         $this->target_areas = DB::table('target_areas')->get();
         $this->movements = DB::table('movements')->get();   
         
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
     /**
      * Display a listing of the resource.

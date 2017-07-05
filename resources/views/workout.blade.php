@@ -24,11 +24,10 @@
         </div>
     </div>
     @if(count($workout) > 0)
-        <div data-type="youtube" data-video-id="{{ $workout[0]['url'] }}"></div>            
+    <video poster="" controls>
+        <source src=" {{ asset('videos/video.mp4') }}" type="video/mp4">
+    </video>
         <input id="workout_id" type="hidden" value="{{ $workout[0]['workout_id'] }}">
-    @else
-        <div data-type="youtube" data-video-id=""></div>            
-        <input id="workout_id" type="hidden" value="">
     @endif
     <div class="row no-margin" style="padding-bottom: 10px;">
         <div class="col-md-7 col-sm-7 col-xs-12" style="padding: 0px; margin: 0px;">
