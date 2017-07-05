@@ -16,7 +16,7 @@
     @if($total_count > 12)
     <div class="x_panel workout_panel" style="margin-bottom: 70px;">
     @else
-    <div class="x_panel workout_panel">
+    <div class="x_panel workout_panel" style="height: 100%">
     @endif
         <div class="pager" style="margin: 0px">                
             @foreach($workouts as $workout)

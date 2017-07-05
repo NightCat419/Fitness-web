@@ -13,7 +13,6 @@
             <file>file:/Users/mac/Sites/Fitness/resources/views/path.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Http/Middleware/RedirectIfAuthenticated.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Http/Middleware/VerifyCsrfToken.php</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/favourite.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Relations.php</file>
             <file>file:/Users/mac/Sites/Fitness/resources/assets/js/app.js</file>
             <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/Auth/LoginController.php</file>
@@ -32,12 +31,12 @@
             <file>file:/Users/mac/Sites/Fitness/routes/console.php</file>
             <file>file:/Users/mac/Sites/Fitness/public/js/custom-login.js</file>
             <file>file:/Users/mac/Sites/Fitness/config/session.php</file>
+            <file>file:/Users/mac/Sites/Fitness/resources/views/favourites.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/resources/views/workout.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/public/css/videocard.css</file>
             <file>file:/Users/mac/Sites/Fitness/config/database.php</file>
             <file>file:/Users/mac/Sites/Fitness/resources/views/layouts/right.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/public/css/textstyle.css</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/auth/login.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/resources/views/vendor/pagination/bootstrap-4.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/resources/views/vendor/pagination/simple-default.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/database/seeds/DatabaseSeeder.php</file>
@@ -45,6 +44,7 @@
             <file>file:/Users/mac/Sites/Fitness/resources/views/home.blade.php</file>
             <file>file:/Users/mac/Sites/Fitness/config/mail.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Http/Middleware/TrimStrings.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Favourites.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Providers/EventServiceProvider.php</file>
             <file>file:/Users/mac/Sites/Fitness/vendor/autoload.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/Auth/ForgotPasswordController.php</file>

@@ -8,7 +8,7 @@
     <div class="row no-margin top_area">
         <div class="layoutHeader" style="margin: 0px; padding: 0px; padding-bottom: 8px; padding-top: 8px">
             <div class="title">
-                <div id="workoutsTitle" style="margin: 0px; padding: 0px; padding-left: 15px; display: inline-block">
+                <div id="workoutsTitle" style="line-height: 40px; margin: 0px; padding: 0px; padding-left: 15px; display: inline-block">
                     @if(count($workout) > 0)
                         {{ $workout[0]['name'] }}
                     @else
