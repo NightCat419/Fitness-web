@@ -40,7 +40,6 @@ class HomeController extends Controller
     }
     
     public function setCurrentTimeZone(Request $request) { //To set the current timezone offset in session
-        $input = $request->all();
         $current_time_zone = $request->get('current_zone');
         $request->session()->put('current_time_zone',  $current_time_zone);        
     }

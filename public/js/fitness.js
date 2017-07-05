@@ -17,4 +17,36 @@ $(document).ready(function() {
             // alert(data);
         });
     }
+    
+    $('#add_to_favourite').click(function() {
+        var workout_id = $('#workout_id').val();
+        var token = $('meta[name="csrf-token"]').attr('content');
+
+        var cls = $('#add_to_favourite').attr("class");
+        if (cls === 'fa fa-heart favourite') {
+            $('#add_to_favourite').attr("class", "fa fa-heart unfavourite");
+            $.ajax({
+                method: "POST",
+                url: '/ajax/add_to_favourites',
+                data: {'_token':token, workout_id: workout_id }
+            }).done(function(data) {
+                var status = data.status;
+                if (status === 'failed') {
+                    $('#add_to_favourite').attr("class", "fa fa-heart favourite");
+                }
+            });
+        } else {
+            $('#add_to_favourite').attr("class", "fa fa-heart favourite");
+            $.ajax({
+                method: "POST",
+                url: '/ajax/remove_from_favourites',
+                data: {'_token':token, workout_id: workout_id }
+            }).done(function(data) {
+                var status = data.status;
+                if (status === 'failed') {
+                    $('#add_to_favourite').attr("class", "fa fa-heart unfavourite");
+                }
+            });
+        }
+    });    
 });

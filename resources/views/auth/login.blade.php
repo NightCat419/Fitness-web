@@ -33,7 +33,8 @@
                         
                         <div class="row login-form-opts">
                             <div class="small-7 columns" style="display: inline-block; float: left; color: #555">
-                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>             
+                                 Remember Me
                             </div>
                             
                             <div class="small-5 columns" style="display: inline-block; float: right;">

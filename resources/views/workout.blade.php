@@ -8,20 +8,27 @@
     <div class="row no-margin top_area">
         <div class="layoutHeader" style="margin: 0px; padding: 0px; padding-bottom: 8px; padding-top: 8px">
             <div class="title">
-                <div id="workoutsTitle" style="margin: 0px; padding: 0px; padding-left: 15px">
+                <div id="workoutsTitle" style="margin: 0px; padding: 0px; padding-left: 15px; display: inline-block">
                     @if(count($workout) > 0)
                         {{ $workout[0]['name'] }}
                     @else
                         No Workout
                     @endif
                 </div>
+                @if($favourited == true) 
+                <i id="add_to_favourite" class="fa fa-heart unfavourite" aria-hidden="true"></i>
+                @else
+                <i id="add_to_favourite" class="fa fa-heart favourite" aria-hidden="true"></i>
+                @endif                
             </div>
         </div>
     </div>
     @if(count($workout) > 0)
         <div data-type="youtube" data-video-id="{{ $workout[0]['url'] }}"></div>            
+        <input id="workout_id" type="hidden" value="{{ $workout[0]['workout_id'] }}">
     @else
         <div data-type="youtube" data-video-id=""></div>            
+        <input id="workout_id" type="hidden" value="">
     @endif
     <div class="row no-margin" style="padding-bottom: 10px;">
         <div class="col-md-7 col-sm-7 col-xs-12" style="padding: 0px; margin: 0px;">
@@ -55,14 +62,7 @@
 @extends('layouts.right')
 @section('login_content')
 
-<div class="add-favorite">
-    <p>Add to Favourites?</p>
-    <button class="button" type="button>">
-        Add To Favourites
-    </button>
-</div>
-
-<div class="workout">
+<!--<div class="workout">
     <p>In This Workout:</p>
     <ul id="inthisworkout">
         @foreach($relations as $relation)
@@ -80,11 +80,40 @@
             @endif
         @endforeach
     </ul>
+</div>-->
+
+<div class="twitter-wrapper" style="-webkit-animation-delay: .5s">
+    <a class="twitter-timeline" 
+       data-chrome="noheader transparent noborders nofooter" 
+       data-theme="dark" 
+       data-link-color="#FAB81E" 
+       href="https://twitter.com/romwod">        
+    </a> 
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+
+<div class="rotating-announcement">
+    <img src="{{ asset('images/dashboard/sneaks.png') }}">
+</div>
+
+<div class="dashboard-footer">
+    <ul>
+        <li>ROMWOD, LLC @ 2017</li>
+        <li>All Rights Reserved</li>        
+        <li style="margin-top: 8px">
+            <a href="#">Terms of Use</a>
+            |
+            <a href="#">Privacy Policy</a>
+        </li>
+    </ul>
+</div>
+
 @endsection
 
 <!-- Plyr core script -->
 <script src="{{ asset('node_modules/plyr/dist/plyr.js') }}"></script>
 <script>plyr.setup()</script>
+
+<script src="{{ asset('js/fitness.js') }}"></script>
 
 @endsection

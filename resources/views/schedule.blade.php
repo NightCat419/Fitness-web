@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="main_col" style="background-color: #ffffff">
+<div class="main_col" style="background-color: #ffffff; height: 100%">
     <div class="row no-margin top_area">
         <div class="col-md-12 schedule_controls">
             <div class="title" style="display: inline-block">

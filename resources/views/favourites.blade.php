@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="main_col">
+<div class="main_col" style="height: 100%">
     <div class="row no-margin top_area">
         <div class="layoutHeader">
             <div class="title">
                 <div id="workoutsTitle">
-                    WORKOUTS<span class="result_count">{{ $total_count }} RESULTS</span>
+                    YOUR FAVOURITES<span class="result_count">{{ $total_count }} RESULTS</span>
                 </div>
             </div>            
         </div>
@@ -16,7 +16,7 @@
     @if($total_count > 12)
     <div class="x_panel workout_panel" style="margin-bottom: 70px;">
     @else
-    <div class="x_panel workout_panel">
+    <div class="x_panel workout_panel" style="height: 100%">
     @endif
         <div class="pager" style="margin: 0px">                
             @foreach($workouts as $workout)
@@ -68,7 +68,7 @@
         </div>
     </div>    
     
-    @if($total_count > 12)
+    @if($total_count > 12)    
     <div class="pagination-container">
         <div class="subcontainer">
             {{ $links }} 

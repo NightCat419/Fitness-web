@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
+use Auth;
 
 class FavouriteController extends Controller
 {
@@ -22,9 +23,25 @@ class FavouriteController extends Controller
      */
     public function index()
     {
-        return view('path')
+        $favourites = \App\Favourites::join('workouts', 'workouts.workout_id', '=', 'favourites.workout_id')
+                ->select('workouts.*', 'favourites.*')->where('favourites.user_id', Auth::id())->paginate(12);        
+        $total_count = $favourites->total();        
+        $decoded_workouts = array();
+        
+        foreach($favourites as $favourite) {
+            $decoded_workout = json_decode($favourite, true);            
+            $workout_id = $decoded_workout['workout_id'];
+            $decoded_workout['relations'] = \App\Relations::getRelatedWorkouts($workout_id);  
+            
+            $decoded_workouts[] = $decoded_workout;
+        }
+        
+        return view('favourites')
+                ->with('total_count', $total_count)
+                ->with('workouts', $decoded_workouts)
                 ->with('target_areas', json_decode($this->target_areas, true))
-                ->with('movements', json_decode($this->movements, true));
+                ->with('movements', json_decode($this->movements, true))
+                ->with('links', $favourites->links('vendor.pagination.custom'));
     }
 
     /**

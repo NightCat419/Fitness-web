@@ -44,9 +44,9 @@ and open the template in the editor.
 }
 
 .video-card .card-inner:hover { 
-    -ms-transform: translate(0px, -2px); /* IE 9 */
-    -webkit-transform: translate(0px, -2px); /* Safari */
-    transform: translate(0px, -2px);
+/*    -ms-transform: translate(0px, -2px);  IE 9 
+    -webkit-transform: translate(0px, -2px);  Safari 
+    transform: translate(0px, -2px);*/
     box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.13)
 }
 

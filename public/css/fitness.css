@@ -99,7 +99,7 @@ body .container.body .background_container {
     color: #e78b06;
     line-height: 40px;
     margin-left: 8px;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .video-title {
@@ -414,12 +414,19 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
     cursor: pointer;
     background-color: #fff;
     min-height: 350px;
+    
+    transition: top .2s, box-shadow .2s;
+    -moz-transition: top .2s, box-shadow .2s;
+    -webkit-transition: top .2s, box-shadow .2s;
+    -o-transition: top .2s, box-shadow .2s;    
 }
 
 .dashboard-card:hover {
-    -ms-transform: translate(0px, -10px); /* IE 9 */
-    -webkit-transform: translate(0px, -10px); /* Safari */
-    transform: translate(0px, -10px);
+    -ms-transform: translate(0px, -4px); /* IE 9 */
+    -webkit-transform: translate(0px, -4px); /* Safari */
+    transform: translate(0px, -4px);
+    
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.13)
 }
 
 a {
@@ -690,6 +697,25 @@ ul#inthisworkout .pose:hover {
 .dashboard-footer ul li a {
     color: #737373;
     text-decoration: underline;
+}
+
+i.fa.fa-heart.favourite,
+i.fa.fa-heart.unfavourite{
+    line-height: 40px; 
+    padding-right: 15px; 
+    font-size: 24px; 
+    float: right; 
+    display: inline-block;
+    cursor: pointer;
+}
+
+i.fa.fa-heart.favourite {
+    color: lightgray;
+}
+
+i.fa.fa-heart.unfavourite,
+i.fa.fa-heart.favourite:hover {
+    color:#EA8511
 }
 
 @media (max-width: 767px) and (min-width: 0px) { 
