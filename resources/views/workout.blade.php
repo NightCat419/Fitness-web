@@ -25,9 +25,17 @@
     </div>
     @if(count($workout) > 0)
     <section>
-        <video poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" crossorigin controls style="width: 100%; height: auto">
-            <source src=" {{ asset('videos/video.mp4') }}" type="video/mp4">
-        </video>
+        <video poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" controls crossorigin>
+                    <!-- Video files -->
+                    <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" type="video/mp4">
+                    <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.webm" type="video/webm">
+
+                    <!-- Text track file -->
+                    <track kind="captions" label="English" srclang="en" src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
+
+                    <!-- Fallback for browsers that don't support the <video> element -->
+                    <a href="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" download>Download</a>
+                </video>
     </section>    
     <input id="workout_id" type="hidden" value="{{ $workout[0]['workout_id'] }}">
     @endif
