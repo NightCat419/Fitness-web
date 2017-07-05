@@ -3,7 +3,7 @@
 
 <!-- Styles -->
 <link rel="stylesheet" href="{{ asset('node_modules/plyr/dist/plyr.css') }}">
-<link rel="stylesheet" href="{{ asset('js/plyr_demo.css') }}">
+<link rel="stylesheet" href="{{ asset('css/plyr_demo.css') }}">
 
 <div class="main_col">
     <div class="row no-margin top_area">
