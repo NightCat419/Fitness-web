@@ -12,7 +12,9 @@ class ShoppingController extends Controller
     
     public function __construct() {
         $this->target_areas = DB::table('target_areas')->get();
-        $this->movements = DB::table('movements')->get();       
+        $this->movements = DB::table('movements')->get();  
+
+        $this->middleware('auth');        
     }
     
     /**
