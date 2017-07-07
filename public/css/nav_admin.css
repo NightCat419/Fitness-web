@@ -1,0 +1,413 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 7, 2017, 2:43:31 AM
+    Author     : mac
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 7, 2017, 2:43:31 AM
+    Author     : mac
+*/
+
+.nav-hidden .container.body .col-md-3.left_col {
+    min-height: 100%;
+    width: 70px;
+    padding: 0;
+    z-index: 9999;
+    position: absolute
+}
+.nav-hidden .container.body .col-md-3.left_col.menu_fixed {
+    position: fixed;
+    height: 100%
+}
+.nav-hidden .container.body .col-md-3.left_col .mCSB_container,
+.nav-hidden .container.body .col-md-3.left_col .mCustomScrollBox {
+    overflow: visible
+}
+.nav-hidden .hidden-small {
+    visibility: hidden
+}
+.nav-hidden .container.body .main_col {   
+    padding: 0px;
+    margin-left: 70px;
+    z-index: 2
+}
+.nav-hidden .navbar.nav_title {
+    width: 70px
+}
+.nav-hidden .navbar.nav_title a span {
+    display: none
+}
+.nav-hidden .navbar.nav_title a i {
+    font-size: 27px;
+    margin: 13px 0 0 3px
+}
+.main_container .top_nav {
+    display: block;
+    margin-left: 0px
+}
+.nav-hidden .main_container .top_nav {
+    display: block;
+    margin-left: 70px;
+    z-index: 2
+}
+.nav-hidden .nav.side-menu li a {
+    text-align: center !important;
+    font-weight: 400;
+    font-size: 10px;
+    padding: 10px 5px
+}
+.nav-hidden .nav.child_menu li.active,
+.nav-hidden .nav.side-menu li.active-sm {
+    border-right: 5px solid #1ABB9C
+}
+.nav-hidden ul.nav.child_menu ul,
+.nav-hidden .nav.side-menu li.active-sm ul ul {
+    position: static;
+    width: 200px;
+    background: none
+}
+.nav-hidden>.nav.side-menu>li.active-sm>a {
+    color: #1ABB9C !important
+}
+.nav-hidden .nav.side-menu li a i.toggle-up {
+    display: none !important
+}
+.nav-hidden .nav.side-menu li a i {
+    font-size: 25px !important;
+    text-align: center;
+    width: 100% !important;
+    margin-bottom: 5px
+}
+.nav-hidden ul.nav.child_menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 210px;
+    z-index: 4000;
+    background: #3E5367;
+    display: none
+}
+.nav-hidden ul.nav.child_menu li {
+    padding: 0 10px
+}
+.nav-hidden ul.nav.child_menu li a {
+    text-align: left !important
+}
+.nav-hidden .profile {
+    display: none
+}
+.nav-hidden .menu_section {
+    margin: 0
+}
+.nav-hidden span.fa,
+.nav-hidden .menu_section h3 {
+    display: none
+}
+.nav-hidden li li span.fa {
+    display: inline-block
+}
+.nav-sm .container.body .col-md-3.left_col {
+    min-height: 100%;
+    width: 70px;
+    padding: 0;
+    z-index: 9999;
+    position: absolute
+}
+.nav-sm .container.body .col-md-3.left_col.menu_fixed {
+    position: fixed;
+    height: 100%
+}
+.nav-sm .container.body .col-md-3.left_col .mCSB_container,
+.nav-sm .container.body .col-md-3.left_col .mCustomScrollBox {
+    overflow: visible
+}
+.nav-sm .hidden-small {
+    visibility: hidden
+}
+.nav-sm .container.body .main_col {   
+    padding: 0px;
+    margin-left: 70px;
+    z-index: 2
+}
+.nav-sm .navbar.nav_title {
+    width: 70px
+}
+.nav-sm .navbar.nav_title a span {
+    display: none
+}
+.nav-sm .navbar.nav_title a i {
+    font-size: 27px;
+    margin: 13px 0 0 3px
+}
+.nav-sm .main_container .top_nav {
+    display: block;
+    margin-left: 70px;
+    z-index: 2
+}
+.nav-sm .nav.side-menu li a {
+    text-align: center !important;
+    font-weight: 400;
+    font-size: 10px;
+    padding: 10px 5px
+}
+.nav-sm .nav.child_menu li.active,
+.nav-sm .nav.side-menu li.active-sm {
+    border-right: 5px solid #1ABB9C
+}
+.nav-sm ul.nav.child_menu ul,
+.nav-sm .nav.side-menu li.active-sm ul ul {
+    position: static;
+    width: 200px;
+    background: none
+}
+.nav-sm>.nav.side-menu>li.active-sm>a {
+    color: #1ABB9C !important
+}
+.nav-sm .nav.side-menu li a i.toggle-up {
+    display: none !important
+}
+.nav-sm .nav.side-menu li a i {
+    font-size: 25px !important;
+    text-align: center;
+    width: 100% !important;
+    margin-bottom: 5px
+}
+.nav-sm ul.nav.child_menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 210px;
+    z-index: 4000;
+    background: #3E5367;
+    display: none
+}
+.nav-sm ul.nav.child_menu li {
+    padding: 0 10px
+}
+.nav-sm ul.nav.child_menu li a {
+    text-align: left !important
+}
+.nav-sm .profile {
+    display: none
+}
+.nav-sm .menu_section {
+    margin: 0
+}
+.nav-sm span.fa,
+.nav-sm .menu_section h3 {
+    display: none
+}
+.nav-sm li li span.fa {
+    display: inline-block
+}
+.nav-sm .toggle {
+    width: 0px;
+    visibility: hidden;
+}
+.nav-hidden .toggle {
+    width: 0px;
+    visibility: hidden
+}
+body .container.body .main_col {
+    background: #F7F7F7
+}
+.right_col {
+    background-color: #303030; 
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100%
+}
+.nav_menu {
+    float: left;
+/*    border-bottom: 1px solid #D9DEE4;*/    
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #ffb300 50%, #ffc21a 100%)
+}
+/*@media (min-width: 480px) {
+    .nav_menu {
+        position: static
+    }
+}*/
+.toggle {
+    float: left;
+    margin: 0;
+    padding-top: 16px;
+}
+.toggle a {
+    padding: 15px 15px 0;
+    margin: 0;
+    cursor: pointer;
+}
+.toggle a i {
+    font-size: 26px
+}
+.top_nav .navbar-right {
+    margin: 0;
+    float: right
+}
+.nav.side-menu>li.current-page,
+.nav.side-menu>li:hover,
+.nav.side-menu>li.active {
+    border-left: 3px solid #e78a07
+}
+.main_menu .fa {
+    color: white
+}
+.thumbnail .image {
+    overflow: hidden
+}
+.thumbnail {
+    overflow: hidden
+}
+.nav_title {
+    width: 0px;
+    float: left;
+    background: #303030;
+    border-radius: 0;
+    height: 57px
+}
+@media (max-width: 900px) {    
+    .col-sm-5 {
+        width: 100%;
+    }
+    .col-sm-7 {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {      
+    .nav-sm .toggle {
+        width: 70px;
+        visibility: visible
+    }
+    .nav-hidden .toggle {
+        width: 70px;
+        visibility: visible
+    }
+    .nav-hidden .container.body .col-md-3.left_col {
+        width: 0px;
+        display: none;
+    }
+    .nav-hidden .container.body .main_col,
+    .nav-hidden .container.body .top_nav {
+        width: 100%;
+        margin: 0;
+    }
+    .nav-sm .container.body .top_nav,
+    .nav-sm .container.body .main_col {
+        margin-right: 0;
+    }
+    .right_col {
+        width: 0;
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .footer_fixed .nav-sm footer {
+        margin-left: 0
+    }
+}
+h2 {
+    font-size: 30px;
+    font-weight: 400
+}
+
+.UserMenuWrapper {
+    display: block;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 0;
+    height: 58px;
+    background: linear-gradient(to right, #ffb300 50%, #ffc21a 100%)
+}
+
+.UserMenuWrapper.no_background {
+    background: none;
+}
+
+.user-gravatar {
+    width: 58px;
+    height: 58px;
+    padding: 0px !important;
+    overflow: hidden;
+    display: block;
+}
+
+.user-session-controls {
+    padding-left: 16px;  
+}
+
+.UserMenuWrapper h5,
+.UserMenuWrapper a {
+    font-family: Rajdhani-Semibold;
+    font-size: 16px;
+    color: #b7830a;
+    padding-top: 2px;
+    margin-bottom: 0px;
+    width: 100%;
+    display:block;
+    max-height: 32px;
+    max-width: 110px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.UserMenuWrapper a {
+    color: #fff;
+    padding: 0;    
+    text-transform: uppercase; 
+}
+
+.user-gravatar img {
+    width: 58px;
+    height: 58px;
+}
+
+.float-left {
+    float: left;
+}
+
+.table-bordered {
+    border: 1px solid #888;
+    border-collapse: collapse;
+}
+
+.table.jambo_table {
+    border: 1px solid #888
+}
+
+table.jambo_table thead {
+    background: #888;
+    color: #fff;
+}
+
+table.dataTable tbody td.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.jambo_table tbody tr:hover td {
+    background: rgba(38, 185, 154, 0.07);
+}
+table.jambo_table tbody tr.selected {
+    background: rgba(38, 185, 154, 0.16)
+}
+
+table.dataTable tbody td.select-checkbox:before, 
+table.dataTable tbody td.select-checkbox:after, 
+table.dataTable tbody th.select-checkbox:before, 
+table.dataTable tbody th.select-checkbox:after {
+    top: inherit
+}

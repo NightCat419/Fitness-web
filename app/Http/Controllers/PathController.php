@@ -22,7 +22,7 @@ class PathController extends Controller
      */
     public function index()
     {
-        return view('path')
+        return view('user/path')
                 ->with('target_areas', json_decode($this->target_areas, true))
                 ->with('movements', json_decode($this->movements, true));
     }

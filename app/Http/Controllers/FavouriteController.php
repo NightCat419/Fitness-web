@@ -36,7 +36,7 @@ class FavouriteController extends Controller
             $decoded_workouts[] = $decoded_workout;
         }
         
-        return view('favourites')
+        return view('user/favourites')
                 ->with('total_count', $total_count)
                 ->with('workouts', $decoded_workouts)
                 ->with('target_areas', json_decode($this->target_areas, true))

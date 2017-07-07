@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Input;
 
 use App\Http\Requests;
 use DB;
+use Datatables;
 
 class WorkoutsController extends Controller
 {
@@ -36,7 +37,7 @@ class WorkoutsController extends Controller
             $decoded_workouts[] = $decoded_workout;
         }        
         
-        return view('workouts')
+        return view('user/workouts')
                 ->with('total_count', $total_count)
                 ->with('workouts', $decoded_workouts)
                 ->with('target_areas', json_decode($this->target_areas, true))
@@ -73,12 +74,16 @@ class WorkoutsController extends Controller
             $decoded_workouts[] = $decoded_workout;
         }        
         
-        return view('workouts')
+        return view('user/workouts')
                 ->with('total_count', $total_count)
                 ->with('workouts', $decoded_workouts)
                 ->with('target_areas', json_decode($this->target_areas, true))
                 ->with('movements', json_decode($this->movements, true))
                 ->with('links', $workouts->appends(Input::except('page'))->links('vendor.pagination.custom'));
+    }
+    
+    public function admin_ajax_data() {
+        return Datatables::of(\App\Workouts::query())->make(true);
     }
     
     /**

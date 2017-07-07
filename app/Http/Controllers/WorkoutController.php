@@ -35,7 +35,7 @@ class WorkoutController extends Controller
         $favourited = !$favourites->isEmpty();
         
         if (!$workout->isEmpty()) {
-            return view('workout')
+            return view('user/workout')
                     ->with('favourited', $favourited)
                     ->with('workout', json_decode($workout, true))
                     ->with('relations', json_decode($relations, true))

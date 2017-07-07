@@ -24,7 +24,7 @@ class ShoppingController extends Controller
      */
     public function index()
     {
-        return view('shopping')
+        return view('user/shopping')
                 ->with('target_areas', json_decode($this->target_areas, true))
                 ->with('movements', json_decode($this->movements, true));
     }

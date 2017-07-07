@@ -23,6 +23,10 @@ class ComposerStaticInitb110e95977990f16d467d1857bec27c7
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'Y' => 
+        array (
+            'Yajra\\Datatables\\' => 17,
+        ),
         'X' => 
         array (
             'XdgBaseDir\\' => 11,
@@ -102,6 +106,10 @@ class ComposerStaticInitb110e95977990f16d467d1857bec27c7
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'Yajra\\Datatables\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -275,6 +283,7 @@ class ComposerStaticInitb110e95977990f16d467d1857bec27c7
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Favourites' => __DIR__ . '/../..' . '/app/Favourites.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -297,7 +306,10 @@ class ComposerStaticInitb110e95977990f16d467d1857bec27c7
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Relations' => __DIR__ . '/../..' . '/app/Relations.php',
+        'App\\Schedule' => __DIR__ . '/../..' . '/app/Schedule.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Workouts' => __DIR__ . '/../..' . '/app/Workouts.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -3200,6 +3212,20 @@ class ComposerStaticInitb110e95977990f16d467d1857bec27c7
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'Yajra\\Datatables\\Contracts\\DataTableEngineContract' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Contracts/DataTableEngineContract.php',
+        'Yajra\\Datatables\\Datatables' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Datatables.php',
+        'Yajra\\Datatables\\DatatablesServiceProvider' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/DatatablesServiceProvider.php',
+        'Yajra\\Datatables\\Engines\\BaseEngine' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Engines/BaseEngine.php',
+        'Yajra\\Datatables\\Engines\\CollectionEngine' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Engines/CollectionEngine.php',
+        'Yajra\\Datatables\\Engines\\EloquentEngine' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Engines/EloquentEngine.php',
+        'Yajra\\Datatables\\Engines\\QueryBuilderEngine' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Engines/QueryBuilderEngine.php',
+        'Yajra\\Datatables\\Exception' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Exception.php',
+        'Yajra\\Datatables\\Facades\\Datatables' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Facades/Datatables.php',
+        'Yajra\\Datatables\\Helper' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Helper.php',
+        'Yajra\\Datatables\\Processors\\DataProcessor' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Processors/DataProcessor.php',
+        'Yajra\\Datatables\\Processors\\RowProcessor' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Processors/RowProcessor.php',
+        'Yajra\\Datatables\\Request' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Request.php',
+        'Yajra\\Datatables\\Transformers\\DataTransformer' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/Transformers/DataTransformer.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

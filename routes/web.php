@@ -30,3 +30,5 @@ Route::get('/workout/{id}', 'WorkoutController@index')->name('workout');
 Route::post('ajax/add_to_favourites', array('as' => 'ajaxaddtofavourites', 'uses' => 'WorkoutController@addToFavourites'));
 Route::post('ajax/remove_from_favourites', array('as' => 'ajaxremovefromfavourites', 'uses' => 'WorkoutController@removeFromFavourites'));
 Route::post('ajax/set_current_time_zone', array('as' => 'ajaxsetcurrenttimezone','uses' => 'HomeController@setCurrentTimeZone'));
+
+Route::post('ajax/workout_admin', 'WorkoutsController@admin_ajax_data');

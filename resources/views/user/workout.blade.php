@@ -11,9 +11,9 @@
             <div class="title">
                 <div id="workoutsTitle" style="line-height: 40px; margin: 0px; padding: 0px; padding-left: 15px; display: inline-block">
                     @if(count($workout) > 0)
-                        {{ $workout[0]['name'] }}
+                    {{ $workout[0]['name'] }}
                     @else
-                        No Workout
+                    No Workout
                     @endif
                 </div>
                 @if($favourited == true) 
@@ -26,17 +26,10 @@
     </div>
     @if(count($workout) > 0)
     <section>
-        <video poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" controls crossorigin>
-                    <!-- Video files -->
-                    <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" type="video/mp4">
-                    <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.webm" type="video/webm">
-
-                    <!-- Text track file -->
-                    <track kind="captions" label="English" srclang="en" src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
-
-                    <!-- Fallback for browsers that don't support the <video> element -->
-                    <a href="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" download>Download</a>
-                </video>
+        <video poster="{{ asset('images/workouts/' . $workout[0]['thumbnail']) }}" controls crossorigin>
+            <!-- Video files -->
+            <source src="{{ asset('videos/' . $workout[0]['url']) }}" type="video/mp4">
+        </video>
     </section>    
     <input id="workout_id" type="hidden" value="{{ $workout[0]['workout_id'] }}">
     @endif
@@ -48,7 +41,7 @@
             </div>
             <div class="video-desc">
                 @if(count($workout) > 0)
-                    {{ $workout[0]['description'] }}                
+                {{ $workout[0]['description'] }}                
                 @endif
             </div>
         </div>        
@@ -57,7 +50,7 @@
                 Optional Requirement
                 <hr class="video_meta_line">
             </div>
-            
+
             <div style="margin-left: 10px">
                 @foreach($optional_requirements as $requirement)
                 <div class="video-desc">

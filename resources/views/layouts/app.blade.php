@@ -36,9 +36,10 @@
         <link href="{{ asset('vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}" rel="stylesheet">
-
+        
         <!-- Custom Theme Style -->
-        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">                
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">   
+        <link href="{{ asset('css/nav_user.css') }}" rel="stylesheet">   
         <link href="{{ asset('css/fitness.css') }}" rel="stylesheet">
         <link href="{{ asset('css/dropdown.css') }}" rel="stylesheet">        
         <link href="{{ asset('css/textstyle.css') }}" rel="stylesheet">                        
@@ -261,9 +262,7 @@
         <script src="{{ asset('vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
         <script src="{{ asset('vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
         <script src="{{ asset('vendors/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
-
-        <script src="{{ asset('vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-
+        
         <!-- Custom Theme Scripts -->
         <script src="{{ asset('js/custom.js') }}"></script>
         <script src="{{ asset('js/fitness.js') }}"></script>

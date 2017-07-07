@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
+use Auth;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
@@ -30,13 +31,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('home', ['name' => 'dashboard'])
-                ->with('target_areas', json_decode($this->target_areas, true))
-                ->with('movements', json_decode($this->movements, true))
-                ->with('today_workout', $this->today_workout)
-                ->with('current_date', \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s')));
+    public function index() {
+        if (Auth::guest() || Auth::user()->previllage == 0) {
+            return view('user/home', ['name' => 'dashboard'])
+                    ->with('target_areas', json_decode($this->target_areas, true))
+                    ->with('movements', json_decode($this->movements, true))
+                    ->with('today_workout', $this->today_workout)
+                    ->with('current_date', \Helpers\DateHelper::getLocalUserDate(date('Y-m-d H:i:s')));
+        } else { // admin page
+            return view('admin/workouts');
+        }
     }
     
     public function setCurrentTimeZone(Request $request) { //To set the current timezone offset in session

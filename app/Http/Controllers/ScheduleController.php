@@ -29,7 +29,7 @@ class ScheduleController extends Controller {
         $weekDays = \Helpers\DateHelper::getWeekDays($currentDate, $day);        
         $workouts = \App\Schedule::getScheduledWorkouts($weekDays);
         
-        return view('schedule', ['number_of_day' => $day, 'current_date' => $currentDate, 'weekDays' => $weekDays])
+        return view('user/schedule', ['number_of_day' => $day, 'current_date' => $currentDate, 'weekDays' => $weekDays])
                         ->with('target_areas', json_decode($this->target_areas, true))
                         ->with('movements', json_decode($this->movements, true))
                         ->with('workouts', $workouts);
@@ -64,7 +64,7 @@ class ScheduleController extends Controller {
         $weekDays = \Helpers\DateHelper::getWeekDays($currentDate, $day);        
         $workouts = \App\Schedule::getScheduledWorkouts($weekDays);
         
-        return view('schedule', ['number_of_day' => $day, 'current_date' => $currentDate, 'weekDays' => $weekDays])
+        return view('user/schedule', ['number_of_day' => $day, 'current_date' => $currentDate, 'weekDays' => $weekDays])
                         ->with('target_areas', json_decode($this->target_areas, true))
                         ->with('movements', json_decode($this->movements, true))
                         ->with('workouts', $workouts);        
