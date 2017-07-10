@@ -13,22 +13,20 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/schedule', 'ScheduleController@index')->name('schedule');
-Route::get('/workouts', 'WorkoutsController@index')->name('workouts');
-Route::get('/path', 'PathController@index')->name('path');
-Route::get('/favourite', 'FavouriteController@index')->name('favourite');
-Route::get('/shopping', 'ShoppingController@index')->name('shopping');
-Route::get('/schedule/past', 'ScheduleController@pastschedule')->name('pastschedule');
-Route::get('/schedule/{id}', 'ScheduleController@schedule_by_date')->name('schedule_by_date');
+Route::get('/', 'App\HomeController@index')->name('home');
+Route::get('/home', 'App\HomeController@index')->name('home');
+Route::get('/schedule', 'App\ScheduleController@index')->name('schedule');
+Route::get('/workouts', 'App\WorkoutsController@index')->name('workouts');
+Route::get('/path', 'App\PathController@index')->name('path');
+Route::get('/favourite', 'App\FavouriteController@index')->name('favourite');
+Route::get('/shopping', 'App\ShoppingController@index')->name('shopping');
+Route::get('/schedule/past', 'App\ScheduleController@pastschedule')->name('pastschedule');
+Route::get('/schedule/{id}', 'App\ScheduleController@schedule_by_date')->name('schedule_by_date');
 
-Route::get('/workouts/search', 'WorkoutsController@search')->name('workouts_search');
+Route::get('/workouts/search', 'App\WorkoutsController@search')->name('workouts_search');
 
-Route::get('/workout/{id}', 'WorkoutController@index')->name('workout');
+Route::get('/workout/{id}', 'App\WorkoutController@index')->name('workout');
 
-Route::post('ajax/add_to_favourites', array('as' => 'ajaxaddtofavourites', 'uses' => 'WorkoutController@addToFavourites'));
-Route::post('ajax/remove_from_favourites', array('as' => 'ajaxremovefromfavourites', 'uses' => 'WorkoutController@removeFromFavourites'));
-Route::post('ajax/set_current_time_zone', array('as' => 'ajaxsetcurrenttimezone','uses' => 'HomeController@setCurrentTimeZone'));
-
-Route::post('ajax/workout_admin', 'WorkoutsController@admin_ajax_data');
+Route::post('/ajax/add_to_favourites', array('as' => 'ajaxaddtofavourites', 'uses' => 'App\WorkoutController@addToFavourites'));
+Route::post('/ajax/remove_from_favourites', array('as' => 'ajaxremovefromfavourites', 'uses' => 'App\WorkoutController@removeFromFavourites'));
+Route::post('/ajax/set_current_time_zone', array('as' => 'ajaxsetcurrenttimezone','uses' => 'App\HomeController@setCurrentTimeZone'));

@@ -15,7 +15,7 @@ class Schedule extends Model
         
         if (!$schedules->isEmpty()) {
             $workout_id = $schedules[0]->workout_id;
-            $workouts = Workouts::where('workout_id', $workout_id)->get();
+            $workouts = Workout::where('workout_id', $workout_id)->get();
             
             if (!$workouts->isEmpty()) {
                 $results = json_decode($workouts[0], true);

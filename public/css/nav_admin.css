@@ -411,3 +411,99 @@ table.dataTable tbody th.select-checkbox:before,
 table.dataTable tbody th.select-checkbox:after {
     top: inherit
 }
+
+div.thumbview-container {    
+    position: relative;
+}
+
+a.admin-thumbview {
+    transition: all 0.2s ;
+    cursor: pointer
+}
+
+a.admin-thumbview .mask {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+a.admin-thumbview:hover {
+    transform: scale(1.0);
+}
+
+a.admin-thumbview:hover .mask {
+    opacity: 1
+}
+
+a.admin-thumbview .mask,
+a.admin-thumbview .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+a.admin-thumbview .play-button {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;    
+    left: 35%;
+    top: 35%;
+    width: 30%;
+    height: 30%;
+}
+
+a.admin-thumbview .play-button img {
+    width: 100%;
+}
+
+.layoutHeader {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 5% 10px 5%;
+}
+
+.row.no-margin {
+    margin: 0px;
+}
+
+.row.no-margin.top_area {
+    background: #ffffff;
+}
+
+#workoutsTitle {
+    font-family: Rajdhani-SemiBold;
+    font-size: 24px;
+    color: #e78b06;
+    line-height: 40px;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.video-title {
+    padding-left: 15px; 
+    padding-right: 15px; 
+    padding-bottom: 8px; 
+    padding-top: 10px;
+    font-family: Rajdhani-Semibold;
+    font-size: 18px;
+    color: #e78b06;
+    text-transform: uppercase;
+}
+
+.video-desc {
+    padding-left: 15px; 
+    padding-right: 15px; 
+    padding-bottom: 8px; 
+    padding-top: 0px;
+    font-size: 13px;
+    color: #303030;
+}
+
+.video_meta_line {
+     padding: 0px; 
+     margin: 0px; 
+     margin-top: 8px; 
+     border-top: 1px solid rgba(0, 0, 0, 0.05)
+}

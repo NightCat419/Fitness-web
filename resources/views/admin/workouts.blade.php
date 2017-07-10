@@ -10,7 +10,6 @@
                     <table id="workout_table" class="table table-striped table-bordered dt-responsive jambo_table" cellspacing="0" width="100%">
                         <thead>
                             <tr>  
-                                <th style="padding-left: 16px; padding-right: 16px"></th>
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Area</th>

@@ -3468,50 +3468,45 @@
         ]
     },
     {
-        "name": "yajra/laravel-datatables-oracle",
-        "version": "v7.9.2",
-        "version_normalized": "7.9.2.0",
+        "name": "symfony/dom-crawler",
+        "version": "v3.1.10",
+        "version_normalized": "3.1.10.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/yajra/laravel-datatables.git",
-            "reference": "df205c536bb1017e5604cbdb4797c787f67369e4"
+            "url": "https://github.com/symfony/dom-crawler.git",
+            "reference": "7eede2a901a19928494194f7d1815a77b9a473a0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/df205c536bb1017e5604cbdb4797c787f67369e4",
-            "reference": "df205c536bb1017e5604cbdb4797c787f67369e4",
+            "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/7eede2a901a19928494194f7d1815a77b9a473a0",
+            "reference": "7eede2a901a19928494194f7d1815a77b9a473a0",
             "shasum": ""
         },
         "require": {
-            "illuminate/database": "5.4.*",
-            "illuminate/filesystem": "5.4.*",
-            "illuminate/http": "5.4.*",
-            "illuminate/support": "5.4.*",
-            "illuminate/view": "5.4.*",
-            "php": ">=5.6.4"
+            "php": ">=5.5.9",
+            "symfony/polyfill-mbstring": "~1.0"
         },
         "require-dev": {
-            "mockery/mockery": "0.9.*",
-            "orchestra/testbench": "^3.4",
-            "phpunit/phpunit": "~5.7"
+            "symfony/css-selector": "~2.8|~3.0"
         },
         "suggest": {
-            "league/fractal": "Transform your api response into something you won't hate.",
-            "yajra/laravel-datatables-buttons": "Plugin for server-side exporting of dataTable.",
-            "yajra/laravel-datatables-html": "Plugin for server-side HTML builder of dataTable."
+            "symfony/css-selector": ""
         },
-        "time": "2017-07-05T01:50:21+00:00",
+        "time": "2017-01-21T17:13:55+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "7.0-dev"
+                "dev-master": "3.1-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Yajra\\Datatables\\": "src/"
-            }
+                "Symfony\\Component\\DomCrawler\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -3519,14 +3514,76 @@
         ],
         "authors": [
             {
-                "name": "Arjay Angeles",
-                "email": "aqangeles@gmail.com"
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
             }
         ],
-        "description": "jQuery DataTables API for Laravel 4|5",
+        "description": "Symfony DomCrawler Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "encore/laravel-admin",
+        "version": "v1.4.2",
+        "version_normalized": "1.4.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/z-song/laravel-admin.git",
+            "reference": "c9e20c1bd5e0ea992057e3a309682630957b254d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/c9e20c1bd5e0ea992057e3a309682630957b254d",
+            "reference": "c9e20c1bd5e0ea992057e3a309682630957b254d",
+            "shasum": ""
+        },
+        "require": {
+            "laravel/framework": "5.4.*",
+            "php": ">=5.6.4",
+            "symfony/dom-crawler": "3.1.*"
+        },
+        "require-dev": {
+            "fzaninotto/faker": "~1.4",
+            "intervention/image": "~2.3",
+            "laravel/laravel": "5.4.*",
+            "phpunit/phpunit": "~5.0",
+            "symfony/css-selector": "2.8.*|3.0.*"
+        },
+        "suggest": {
+            "intervention/image": "Required to handling and manipulation upload images (~2.3).",
+            "spatie/eloquent-sortable": "Required to built orderable gird."
+        },
+        "time": "2017-03-15T05:11:49+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Encore\\Admin\\": "src/"
+            },
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "zsong",
+                "email": "zosong@126.com"
+            }
+        ],
+        "description": "laravel admin",
+        "homepage": "https://github.com/z-song/laravel-admin",
         "keywords": [
-            "datatables",
-            "jquery",
+            "admin",
+            "chart",
+            "form",
+            "grid",
             "laravel"
         ]
     }

@@ -53,7 +53,7 @@
                 <div class="col-md-3 left_col menu_fixed">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="/" class="site_title" style="padding: 0px">
+                            <a href="{{ route('admin_workouts') }}" class="site_title" style="padding: 0px">
                                 <img src="{{ asset('images/common/logo-mark.svg') }}" style="width: 40px; display: block; margin: auto; margin-top: 10px;">
                             </a>
                         </div>
@@ -70,7 +70,7 @@
                                         </a>
                                     </li>
                                     <li title = "Workouts">
-                                        <a href="{{ route('workouts') }}">
+                                        <a href="{{ route('admin_workouts') }}">
                                             <img src="{{ asset('images/sidemenu/yoga.png') }}"></img>
                                         </a>
                                     </li>

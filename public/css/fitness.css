@@ -154,13 +154,6 @@ body .container.body .background_container {
     float: right;
 }
 
-.video_meta_line {
-     padding: 0px; 
-     margin: 0px; 
-     margin-top: 8px; 
-     border-top: 1px solid rgba(0, 0, 0, 0.05)
-}
-
 .archive-link img {
     width: 14px;
     height: 14px;
