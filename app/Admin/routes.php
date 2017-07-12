@@ -17,7 +17,11 @@ Route::group([
     $router->resource('workouts', WorkoutController::class);    
     $router->resource('relations', RelationController::class);
     $router->resource('optional_requirements', OptionalRequirementController::class);
-    
+    $router->resource('schedules', ScheduleController::class);
+
+    $router->post('api/create_schedules', 'ScheduleController@createSchedules');
+    $router->get('api/show_create_schedules', 'ScheduleController@showCreateSchedules');
+
     $router->get('api/target_areas', 'ApiController@target_areas');
     $router->get('api/movements', 'ApiController@movements');
 });

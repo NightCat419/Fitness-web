@@ -103,7 +103,7 @@ class WorkoutController extends Controller
                 $filter->like('area', 'Target Area');
                 $filter->like('movement', 'Movement');
                 $filter->between('minutes', 'Minutes');
-            });c            /*
+            });            /*
             $grid->created_at();
             $grid->updated_at();*/
         });
