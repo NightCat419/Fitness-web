@@ -3,6 +3,10 @@
 namespace App\Admin\Controllers;
 
 use App\Workout;
+use App\TargetArea;
+use App\Movement;
+use App\Relations;
+use DB;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -79,7 +83,7 @@ class WorkoutController extends Controller
             $grid->name('Name')->sortable();
             $grid->area('Target Area')->sortable();
             $grid->movement('Movement')->sortable();
-            $grid->thumbnail('Video')->image(URL::asset('images/workouts'), 100);
+            $grid->thumbnail('Video')->image(URL::asset('/'), 100);
             $grid->minutes('Minutes')->sortable();
             $grid->description('Description')->sortable();
             
@@ -89,7 +93,17 @@ class WorkoutController extends Controller
                 }, $relations);
                 return join(' ', $relations);
             });
-            /*
+            
+            $grid->filter(function ($filter) {
+                $filter->useModal();
+                
+                $filter->disableIdFilter();
+                $filter->like('workout_id', 'ID');
+                $filter->like('name', 'Name');
+                $filter->like('area', 'Target Area');
+                $filter->like('movement', 'Movement');
+                $filter->between('minutes', 'Minutes');
+            });c            /*
             $grid->created_at();
             $grid->updated_at();*/
         });
@@ -101,13 +115,16 @@ class WorkoutController extends Controller
      * @return Form
      */
     protected function form()
-    {
+    {       
         return Admin::form(Workout::class, function (Form $form) {
-
-            //$form->display('id', 'ID');
-            
             $form->text('workout_id', 'Workout ID')->rules('required|min:3|max:50');
-            
+            $form->select('area', 'Target Area')->options(TargetArea::all()->pluck('area', 'area'));
+            $form->select('movement', 'Movement')->options(Movement::all()->pluck('movement', 'movement'));
+            $form->text('description', 'Description')->rules('required|min:3');
+            $form->number('minutes', 'Minutes');
+            $form->image('thumbnail')->move('images/workouts');
+            $form->file('url')->move('videos')->rules('mimes:mp4');
+                        
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });

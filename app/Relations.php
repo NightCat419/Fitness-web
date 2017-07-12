@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Relations extends Model
 {
     //
-    protected $table = 'relations';    
-    public $timestamps = false; 
+    protected $table = 'relations';
     
     public static function getRelatedWorkouts($workout_id) {
         $relations = json_decode(Relations::where('workout_id', $workout_id)->get(), true);

@@ -3,44 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/admin/workouts.blade.php</file>
-            <file>file:/Users/mac/Sites/Fitness/config/app.php</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/admin/video.blade.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/Admin/WorkoutController.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/OptionalRequirementController.php</file>
+            <file>file:/Users/mac/Sites/Fitness/config/admin.php</file>
+            <file>file:/Users/mac/Sites/Fitness/routes/channels.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/UserController.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/App/HomeController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/vendors/datatables.net-select/js/dataTables.select.min.js</file>
-            <file>file:/Users/mac/Sites/Fitness/public/css/nav_user.css</file>
-            <file>file:/Users/mac/Sites/Fitness/config/auth.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/css/custom-login.css</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/layouts/app_admin.blade.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/OptionalRequirement.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/TargetArea.php</file>
+            <file>file:/Users/mac/Sites/Fitness/routes/api.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/App/ScheduleController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/App/WorkoutsController.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Workout.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/ApiController.php</file>
             <file>file:/Users/mac/Sites/Fitness/app/Relations.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/js/admin_workout.js</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Movement.php</file>
             <file>file:/Users/mac/Sites/Fitness/routes/web.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/Auth/LoginController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/config/broadcasting.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/App/PathController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Schedule.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/css/fitness.css</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/Controller.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/css/custom.css</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/layouts/app.blade.php</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/user/home.blade.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/App/FavouriteController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/index.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/App/WorkoutController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/vendors/datatables.net-select/css/select.dataTables.min.css</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Workouts.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/Admin/WorkoutsController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/config/view.php</file>
-            <file>file:/Users/mac/Sites/Fitness/config/session.php</file>
-            <file>file:/Users/mac/Sites/Fitness/public/css/nav_admin.css</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/user/favourites.blade.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/App/ShoppingController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/app/Http/Controllers/Admin/HomeController.php</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/auth/login.blade.php</file>
-            <file>file:/Users/mac/Sites/Fitness/resources/views/user/workout.blade.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/RelationController.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/HomeController.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/routes.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/MovementController.php</file>
+            <file>file:/Users/mac/Sites/Fitness/config/filesystems.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/WorkoutController.php</file>
+            <file>file:/Users/mac/Sites/Fitness/app/Admin/Controllers/TargetAreaController.php</file>
         </group>
     </open-files>
 </project-private>
