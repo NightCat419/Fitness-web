@@ -123,7 +123,7 @@ class WorkoutController extends Controller
             $form->text('description', 'Description')->rules('required|min:3');
             $form->number('minutes', 'Minutes');
             $form->image('thumbnail')->move('images/workouts');
-            $form->file('url', 'Video')->move('videos')->rules('mimes:mp4');
+            $form->text('url', 'Video')->rules('required|min:3');
                         
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

@@ -28,7 +28,7 @@
     <section>
         <video poster="{{ asset($workout[0]['thumbnail']) }}" controls crossorigin>
             <!-- Video files -->
-            <source src="{{ asset($workout[0]['url']) }}" type="video/mp4">
+            <source src="{{ asset('videos/') . $workout[0]['url'] }}" type="video/mp4">
         </video>
     </section>    
     <input id="workout_id" type="hidden" value="{{ $workout[0]['workout_id'] }}">
