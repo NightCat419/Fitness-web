@@ -49,7 +49,7 @@ class ScheduleController extends Controller {
         $scheduleDays = \Helpers\DateHelper::getScheduleDays($currentDate);
         $scheduleDays = array_reverse($scheduleDays);
         
-        return view('pastschedule', ['scheduleDays' => $scheduleDays, 'number_of_day' => 1])
+        return view('user/pastschedule', ['scheduleDays' => $scheduleDays, 'number_of_day' => 1])
                         ->with('target_areas', json_decode($this->target_areas, true))
                         ->with('movements', json_decode($this->movements, true));
     }
