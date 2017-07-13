@@ -41,7 +41,7 @@
         </div>  
         <div class="col-md-4 middle_column">
             <a href="{{ route('workout', ['id' => $workout['workout_id']]) }}" class="card-view">
-                <img width="100%" src="{{ asset('images/workouts/' . $workout['thumbnail']) }}" alt="..." />
+                <img width="100%" src="{{ asset($workout['thumbnail']) }}" alt="..." />
                 <div class="mask"></div>  
                 <div class="play-button">
                     <img src="{{ asset('images/common/play.png') }}" alt="..." />

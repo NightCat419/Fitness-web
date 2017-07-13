@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-md-7 col-sm-7 col-xs-12 col-today-workout-video">
                             <a href="{{ route('workout', ['id' => $today_workout['workout_id']]) }}" class="card-view">
-                                <img width="100%" src="{{ asset('images/dashboard/workout.jpg') }}" alt="..." />
+                                <img width="100%" src="{{ asset($today_workout['thumbnail']) }}" alt="..." />
                                 <div class="mask"></div>
                                 <div class="play-button">
                                     <img src="{{ asset('images/common/play.png') }}" alt="..." />

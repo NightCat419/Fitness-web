@@ -50,9 +50,8 @@ return [
 
         'directory'  => [
             'image'  => 'images',
-            'file'   => 'file',
-            'workout_thumb' => 'images/workouts',
-            'video' => 'videos'
+            'file'   => 'videos',
+            'video'  => 'videos'
         ],
 
         'host' => 'http://fitness.localhost.com/',

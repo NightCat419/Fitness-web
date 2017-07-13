@@ -24,7 +24,7 @@
                 <div class="card-inner">
                     <div class="video-thumbnail">
                         <a href="{{ route('workout', ['id' => $workout['workout_id']]) }}">
-                            <img src="{{ asset("images/dashboard/" . $workout['thumbnail']) }}">
+                            <img src="{{ asset($workout['thumbnail']) }}">
                         </a>
                         <a class="player_play_btn" href="{{ route('workout', ['id' => $workout['workout_id']]) }}"></a>
                         <span class="label_new">new</span>
