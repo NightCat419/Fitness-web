@@ -4,11 +4,9 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-Fitness website that developed using laravel 5.4, php >= 5.6.4.
+* Fitness website that developed using laravel 5.4, php >= 5.6.4.
 This was started by Chang
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* 1.0
 
 ### How do I get set up? ###
 
