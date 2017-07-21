@@ -42,7 +42,7 @@
                         <ul class="nav navbar-nav">
                             <li><a style="overflow: hidden" href="{{ route('schedule') }}">Schedule</a></li>
                             <li><a style="overflow: hidden" href="{{ route('workouts') }}">Workouts</a></li>
-                            <li><a style="overflow: hidden" href="#">Pricing</a></li>
+                            <li><a style="overflow: hidden" href="{{ route('pricing') }}">Pricing</a></li>
                             <li><a style="overflow: hidden" href="#">About Us</a></li>
                         </ul>                    
                         <ul class="nav navbar-nav navbar-right">

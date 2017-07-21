@@ -17,6 +17,7 @@ Route::get('/', 'App\HomeController@index')->name('home');
 Route::get('/home', 'App\HomeController@index')->name('home');
 Route::get('/schedule', 'App\ScheduleController@index')->name('schedule');
 Route::get('/workouts', 'App\WorkoutsController@index')->name('workouts');
+Route::get('/pricing', 'App\PricingController@index')->name('pricing');
 Route::get('/path', 'App\PathController@index')->name('path');
 Route::get('/favourite', 'App\FavouriteController@index')->name('favourite');
 Route::get('/shopping', 'App\ShoppingController@index')->name('shopping');
