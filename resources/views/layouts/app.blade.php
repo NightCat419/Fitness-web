@@ -43,7 +43,8 @@
         <link href="{{ asset('css/fitness.css') }}" rel="stylesheet">
         <link href="{{ asset('css/dropdown.css') }}" rel="stylesheet">        
         <link href="{{ asset('css/textstyle.css') }}" rel="stylesheet">                        
-        <link href="{{ asset('css/videocard.css') }}" rel="stylesheet">        
+        <link href="{{ asset('css/videocard.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/subscription.css') }}" rel="stylesheet">
     </head>
 
     <body class="nav-hidden">

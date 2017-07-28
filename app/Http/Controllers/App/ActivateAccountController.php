@@ -1,20 +1,23 @@
 <?php
 
 namespace App\Http\Controllers\App;
-use App\Http\Controllers\Controller;
 
+use Auth;
+use URL;
+use DB;
+use App\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class PricingController extends Controller
+class ActivateAccountController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        //$this->middleware('guest');
+        $this->target_areas = DB::table('target_areas')->get();
+        $this->movements = DB::table('movements')->get();
+        $this->today_workout = \App\Schedule::getTodayWorkout();
+
+        // $this->middleware('auth');
     }
 
     /**
@@ -22,9 +25,31 @@ class PricingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('user/pricing');
+        $user = Auth::user();
+        $subscription = $user->subscription;
+        //echo $user;
+        if($subscription == null){
+            $prevUrl = Url::previous();
+            $requestedRoute = app('router')->getRoutes()->match(app('request')->create($prevUrl))->getName();
+            if ($requestedRoute == "login"){
+                //echo phpinfo();
+                return view('user/activateaccount')
+                    ->with('target_areas', json_decode($this->target_areas, true))
+                    ->with('movements', json_decode($this->movements, true));
+//                return redirect('http://fitness.localhost.com/pricing');
+            }
+            else if($requestedRoute == "register"){
+                echo $requestedRoute;
+            }
+            else{
+                echo $requestedRoute;
+            }
+        }
+        else{
+            echo $subscription;
+        }
     }
 
     /**

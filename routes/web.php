@@ -28,6 +28,8 @@ Route::get('/workouts/search', 'App\WorkoutsController@search')->name('workouts_
 
 Route::get('/workout/{id}', 'App\WorkoutController@index')->name('workout');
 
+Route::get('/activate/account', 'App\ActivateAccountController@index')->name('activate_account');
+
 Route::post('/ajax/add_to_favourites', array('as' => 'ajaxaddtofavourites', 'uses' => 'App\WorkoutController@addToFavourites'));
 Route::post('/ajax/remove_from_favourites', array('as' => 'ajaxremovefromfavourites', 'uses' => 'App\WorkoutController@removeFromFavourites'));
 Route::post('/ajax/set_current_time_zone', array('as' => 'ajaxsetcurrenttimezone','uses' => 'App\HomeController@setCurrentTimeZone'));
