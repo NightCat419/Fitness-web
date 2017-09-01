@@ -5,9 +5,9 @@
 }
 
 .minute-label {
-    padding: 5px 20px;
+    padding: 2px 5px 0px 5px;
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.8);
     border-radius: 2px;
     margin-bottom: 20px;
 }
@@ -35,6 +35,14 @@
 
 .font_rajdhani {
     font-family: Rajdhani
+}
+
+.font_asgalt_regular {
+    font-family: Asgalt-Regular
+}
+
+.a32 {
+    font-size: 32px;
 }
 
 .s12 {
@@ -70,8 +78,22 @@
 }
 
 .s24 {
-    font-size: 24px;    
+    font-size: 24px;
     line-height: 1.4;
+}
+
+.s40 {
+    font-size: 40px;
+    line-height: 1;
+    padding-top: 0px;
+    font-weight: 600;
+}
+
+.ss30 {
+    font-size: 30px;
+    line-height: 1;
+    padding-top: 0px;
+    font-weight: 600;
 }
 
 .s36 {
@@ -80,11 +102,13 @@
 }
 
 .s26 {
-    font-size: 26px;
+    font-size: 22px;
+    line-height: 0.7;
+    font-weight: 600;
 }
 
 .s13 {
-    font-size: 13px;
+    font-size: 23px;
 }
 
 .white {
@@ -96,11 +120,11 @@
 }
 
 .darkblack {
-    color: #303030
+    color: #101010
 }
 
 .middleblack {
-    color: #808080
+    color: #101010
 }
 
 .lightwhitecolor {
@@ -109,7 +133,7 @@
 
 .custom-title {
     margin-bottom: 0px;
-    font-family: Rajdhani-SemiBold;
+    font-family: Asgalt-Regular;
     text-transform: uppercase;
     margin-top: 0;
 }
@@ -123,7 +147,7 @@
 .thin-line {
     margin-top: 3px;
     margin-bottom: 3px;
-    border-top: 3px solid #e78b06
+    border-top: 3px solid #ffffff
 }
 
 .uppercase {
@@ -143,4 +167,9 @@
 @font-face {
     font-family: Rajdhani-SemiBold;
     src: url(../fonts/Rajdhani-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Asgalt-Regular;
+    src: url(../fonts/Asgalt-Regular.ttf);
 }

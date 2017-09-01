@@ -75,10 +75,10 @@
 }
 
 .dropdown.filterHeading p {
-    color: #9e9e9e;
+    color: #ffffff;
     margin: 0px;
     padding: 0px;
-    font-size: 11px;
+    font-size: 17px;
     line-height: 2;    
 }
 
@@ -91,7 +91,7 @@
     color: #fff;
 }
 
-.dropdown-columns { 
+.dropdown-columns {
     display: inline-block;
     width: 100%;
     float: left;
@@ -130,13 +130,13 @@
 }
 
 #quickStart {
-    font-family: Rajdhani-Medium;
-    font-size: 18px;
+    font-family:Asgalt-Regular;
+    font-size: 37px;
     
     padding: 16px;
     
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 17px;
+    padding-bottom: 9px;
 }
 
 .top_nav .dropdown-menu li a {

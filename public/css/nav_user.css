@@ -221,10 +221,12 @@ body .container.body .main_col {
 }
 .nav_menu {
     float: left;
-/*    border-bottom: 1px solid #D9DEE4;*/    
+/*    border-bottom: 1px solid #D9DEE4;*/
+    height: 58px;
     width: 100%;
     position: relative;
-    background: linear-gradient(to right, #ffb300 50%, #ffc21a 100%)
+/*    background: linear-gradient(to right, #ffb300 50%, #ffc21a 100%)*/
+    background: #5397e4;
 }
 /*@media (min-width: 480px) {
     .nav_menu {
@@ -265,7 +267,7 @@ body .container.body .main_col {
 .nav_title {
     width: 0px;
     float: left;
-    background: #303030;
+    background: #F39C12;
     border-radius: 0;
     height: 57px
 }

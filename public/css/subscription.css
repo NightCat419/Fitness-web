@@ -161,7 +161,7 @@
 }
 
 .planType {
-    font-size: 1.2em;
+    font-size: 1.7em;
     font-weight: bold;
     margin-bottom: 0rem;
 }
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.025em;
 }
 .planFor {
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #d6d6d6;
     padding-bottom: 1rem;
     border-bottom: 2px solid #454545;
@@ -261,12 +261,13 @@ label>[type='checkbox'], label>[type='radio'] {
     background-position: 87% center;
 }
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    font-family: Asgalt-Regular;
     margin: 0;
     padding: 0;
 }
 .plan-benefits li {
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     line-height: 2.2rem;
     text-align: left;
 }
@@ -287,7 +288,7 @@ p {
     text-rendering: optimizeLegibility;
 }
 .sub-p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: bold;
 }
 @media screen and (min-width: 53.125em) {
@@ -342,7 +343,8 @@ ul.tabs {
     padding-top: 1.5em;
 }
 a {
-    color: #ffb300;
+    /*color: #ffb300;*/
+    color: #000000;
     text-decoration: none;
     line-height: inherit;
     cursor: pointer;
@@ -454,7 +456,7 @@ fieldset {
 #recurly-cc-form .inputWrapper label {
     color: #717171;
     top: 9px;
-    font-size: 1.13rem;
+    font-size: 1.63rem;
     text-transform: uppercase;
     text-indent: 0;
     text-align: left;
@@ -499,7 +501,8 @@ fieldset {
     outline: none;
 }
 #recurly-cc-form .inputWrapper input {
-    font-size: 1.35rem;
+    font-size: 2.5rem;
+    padding-top: 15px;
     color: #717171;
     text-indent: 0;
 }
@@ -575,17 +578,17 @@ select {
 }
 #recurly-cc-form .inputWrapper select {
     margin-bottom: 0;
-    font-size: 1.35rem;
+    font-size: 2.5rem;
     color: #717171;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     padding-left: 0;
 }
 .inputFieldsWrapper .inputWrapper.input-one-third {
     width: 33.33333%;
 }
 p {
-    font-size: inherit;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1;
     margin-bottom: 1rem;
     text-rendering: optimizeLegibility;
 }

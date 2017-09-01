@@ -6,7 +6,7 @@
                     @if (Auth::guest())
                     <div class="loggedIn float-left">
                         <div class="user-gravatar float-left">
-                            <img src="{{ asset('images/common/icon-avatar_black.png') }}">
+                            <img src="{{ asset('images/common/icon-avatar_white.png') }}">
                         </div>
                         <div class="user-session-controls float-left">
                             <h5>Welcome</h5>                            
@@ -16,7 +16,7 @@
                     @else
                     <div class="loggedIn float-left">
                         <div class="user-gravatar float-left">
-                            <img src="{{ asset('images/common/icon-avatar_black.png') }}">
+                            <img src="{{ asset('images/common/icon-avatar_white.png') }}">
                         </div>
                         <div class="user-session-controls float-left">
                             <h5>{{ Auth::user()->firstname }}, {{ Auth::user()->lastname }}</h5>

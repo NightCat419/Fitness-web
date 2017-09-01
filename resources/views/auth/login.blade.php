@@ -12,7 +12,7 @@
                     <h1 class="component-title white">Log into your account</h1>
 
                     <div class="form-fields-panel">
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" style="padding-top: 70px">
                             <input id="email" type="email" placeholder="E-Mail Address" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                             @if ($errors->has('email'))
                             <span class="help-block">
@@ -49,7 +49,7 @@
                         Log In
                     </button>
                     
-                    <img src="{{ asset('images/dashboard/logo.png') }}" style="padding-top: 50px; width: 200px; display: block; height: auto; margin: auto">
+                    <img src="{{ asset('images/dashboard/logo.png') }}" style="padding-top: 80px; width: 200px; display: block; height: auto; margin: auto">
                 </form>
             </div>
         </div>

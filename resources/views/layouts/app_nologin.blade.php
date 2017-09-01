@@ -44,8 +44,9 @@
                             <li><a style="overflow: hidden" href="{{ route('workouts') }}">Workouts</a></li>
                             <li><a style="overflow: hidden" href="{{ route('pricing') }}">Pricing</a></li>
                             <li><a style="overflow: hidden" href="#">About Us</a></li>
-                        </ul>                    
+                        </ul>
                         <ul class="nav navbar-nav navbar-right">
+                            <li><img src="{{ asset('images/common/icon-avatar_white.png') }}" style="height: 50px; padding-top: 0px"></li>
                             <li><a style="overflow: hidden" href="{{ route('login') }}">Log In</a></li>
                             <li><a style="overflow: hidden" href="{{ route('register') }}">Register</a></li>
                         </ul>

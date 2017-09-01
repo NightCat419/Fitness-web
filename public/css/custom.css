@@ -142,7 +142,8 @@ html , body {
     padding: 0 0 4px 0
 }
 .left_col {
-    background: #303030
+    /*background: #303030*/
+    background: #F39C12
 }
 .site_title i {
     border: 1px solid #EAEAEA;
@@ -527,6 +528,7 @@ a:focus {
     }
 }
 .top_nav .dropdown-menu li {
+    font-family: Rajdhani-Medium;
     width: 100%
 }
 .top_nav .dropdown-menu li a {
@@ -632,7 +634,8 @@ a:focus {
     text-decoration: none
 }
 .nav.navbar-nav>li>a {
-    color: #515356 !important
+    /*color: #515356 !important*/
+    color: #ffffff !important
 }
 .nav.top_menu>li>a {
     position: relative;
@@ -3604,4 +3607,30 @@ ul.notifications {
 
 body {
     color: #000;
+}
+
+.pager .disabled>a, .pager .disabled>a:focus, .pager .disabled>a:hover, .pager .disabled>span {
+    color: #000000;
+    cursor: not-allowed;
+    background-color: #ededed;
+}
+
+.pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 0px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.pager li>a {
+    display: inline-block;
+    padding: 0px 14px;
+    background-color: #ffb300;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.pager li>span {
+    background-color: #ededed;
 }

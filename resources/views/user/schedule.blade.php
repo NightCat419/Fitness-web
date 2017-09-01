@@ -35,8 +35,8 @@
     @if(array_key_exists('workout_id', $workout))
     <div id="day{{ $workout['day_number'] }}" class="x_panel wod_schedule_day">                
         <div class="col-md-4 left_column">
-            <div class="schedule_day_label font_rajdhani_semibold s18 darkblack">DAY {{ $workout['day_number'] }}</div>
-            <div class="font_rajdhani_semibold s16 darkblack uppercase">{{ \Helpers\DateHelper::convertReadableFormat($workout['date'], true, true) }}</div>            
+            <div class="schedule_day_label font_asgalt_regular ss30 darkblack">DAY {{ $workout['day_number'] }}</div>
+            <div class="font_asgalt_regular ss30 darkblack uppercase">{{ \Helpers\DateHelper::convertReadableFormat($workout['date'], true, true) }}</div>
             <p class="schedule_day_shortdesc s13 middleblack">{{ $workout['short_desc'] }}</p>   
         </div>  
         <div class="col-md-4 middle_column">
@@ -50,7 +50,7 @@
             </a>
         </div>
         <div class="col-md-4 right_column">
-            <div class="font_rajdhani_semibold s24 darkblack uppercase">{{ $workout['name'] }}</div>
+            <div class="font_asgalt_regular ss30 darkblack uppercase">{{ $workout['name'] }}</div>
             <p class="s13 middleblack">{{ $workout['description'] }}</p>   
             
             <br>
