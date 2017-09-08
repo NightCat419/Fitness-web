@@ -267,5 +267,7 @@
         <!-- Custom Theme Scripts -->
         <script src="{{ asset('js/custom.js') }}"></script>
         <script src="{{ asset('js/fitness.js') }}"></script>
+        <script src="{{ asset('js/payment.js') }}"></script>
+
     </body>
 </html>

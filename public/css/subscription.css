@@ -1,9 +1,10 @@
 #activateAccountPanel h1 {
-    font-size: 2.5em;
+    font-size: 4em;
     text-align: center;
-    font-family: "Tungsten A", "Tungsten B";
+    /*font-family: "Tungsten A", "Tungsten B";*/
+    font-family: Asgalt-Regular;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.025em;
 }
@@ -54,6 +55,16 @@
     padding: 1.5em 0;
     font-weight: bold;
     outline: none;
+    background-image: url(//assets.romwod.com/images/icons/icon-checkwhite.svg?auto=format&dpr=2&crop=faces&fit=crop&w=16&h=16);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: center right 20px;
+    margin: 0px;
+}
+
+.term-select button:active, .term-select button:focus {
+    color: #fff;
+    background: #ffb300;
     background-image: url(//assets.romwod.com/images/icons/icon-checkwhite.svg?auto=format&dpr=2&crop=faces&fit=crop&w=16&h=16);
     background-repeat: no-repeat;
     background-size: 14px;
@@ -140,6 +151,9 @@
     }
 }
 
+#indivi-div {
+    margin-top: 0.8rem;
+}
 .planWrapper .columns {
     padding: 1.5rem;
 }
@@ -195,8 +209,8 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.025em;
 }
 .planFor {
-    font-size: 2rem;
-    color: #d6d6d6;
+    font-size: 2.4rem;
+    /*color: #d6d6d6;*/
     padding-bottom: 1rem;
     border-bottom: 2px solid #454545;
 }
@@ -278,7 +292,8 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 }
 .headline-p {
     margin-bottom: 0;
-    font-size: 1.7rem;
+    font-size: 3rem;
+    font-weight: 400;
     line-height: 1.7rem;
 }
 p {
@@ -288,8 +303,8 @@ p {
     text-rendering: optimizeLegibility;
 }
 .sub-p {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 2.3rem;
+    /*font-weight: bold;*/
 }
 @media screen and (min-width: 53.125em) {
     .hide-for-large {
@@ -302,7 +317,7 @@ p {
 }
 
 .sub-p:first-of-type {
-    font-size: 1.7em;
+    font-size: 2.5em;
     font-weight: 400;
     margin: 0px;
 }
@@ -416,6 +431,7 @@ ul.tabs .tabs-title a img {
     color: #ffb300;
     border-color: #ffb300;
 }
+
 .tabs-panel.is-active {
     display: block;
 }
@@ -501,7 +517,7 @@ fieldset {
     outline: none;
 }
 #recurly-cc-form .inputWrapper input {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     padding-top: 15px;
     color: #717171;
     text-indent: 0;
@@ -578,10 +594,10 @@ select {
 }
 #recurly-cc-form .inputWrapper select {
     margin-bottom: 0;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: #717171;
     padding-bottom: 0px;
-    padding-left: 0;
+    padding-left: 0px;
 }
 .inputFieldsWrapper .inputWrapper.input-one-third {
     width: 33.33333%;
@@ -593,7 +609,7 @@ p {
     text-rendering: optimizeLegibility;
 }
 .billingAdvisory {
-    font-size: 1.25rem;
+    font-size: 2rem;
     background: #e3e3e3;
     color: #717171;
     width: 100%;
@@ -615,4 +631,29 @@ p {
 .button:hover, .button:focus {
     background-color: #d99800;
     color: #fefefe;
+}
+
+.planWrapper.selected .selectPlanButton .theSelected, .selectPlanButton .unselected {
+    display: block;
+}
+
+.selectPlanButton .theSelected {
+    display: none;
+}
+
+.planWrapper.selected button {
+    color: #fff;
+    background: #ffb300;
+    background-image: url(//assets.romwod.com/images/icons/icon-checkwhite.svg?auto=format&dpr=2&crop=faces&fit=crop&w=16&h=16);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 87% center;
+}
+
+.countries {
+    padding-left: 15px;
+}
+
+.states {
+    padding-left: 15px;
 }

@@ -16,25 +16,20 @@
                                     <button class="button monthlybtn" name="1">Monthly</button>
                                     <button class="button yearlybtn hollow custom-hollow" name="12">Yearly</button>
                                 </div><!-- react-empty: 1102 -->
-                                <div class="planWrapper columns small-6 large-12">
+                                <div id="indivi-div" class="planWrapper columns small-6 large-12">
                                     <div class="columns small-12 medium-12 large-6"><h6 class="planType">
                                             <!-- react-text: 1106 -->Athlete<!-- /react-text -->
                                             <!-- react-text: 1107 --> Plan<!-- /react-text --></h6>
                                         <p class="planFor"><!-- react-text: 1109 -->For <!-- /react-text -->
-                                            <!-- react-text: 1110 -->Individuals<!-- /react-text -->
-                                            <!-- react-text: 1111 -->.<!-- /react-text --></p><label
+                                            <!-- react-text: 1110 -->Individuals<!-- /react-text --><!-- react-text: 1111 -->.<!-- /react-text --></p><label
                                                 class="selectPlanButton">
-                                            <button type="radio" name="plan" data-code="athlete-monthly" value="8"><span
-                                                        class="unselected">Select Plan</span><span class="theSelected">Selected</span>
+                                            <button id="indivi-btn" type="radio" name="plan" data-code="athlete-monthly" value="8">
+                                                <span id="indivi-unselected" class="unselected">Select Plan</span><span class="theSelected">Selected</span>
                                             </button>
                                         </label></div>
-                                    <div class="columns hide-for-12 medium-12 large-6"><p class="headline-p">
-                                            <!-- react-text: 1118 -->7<!-- /react-text --><!-- react-text: 1119 --> Day
-                                            Free Trial<!-- /react-text --></p>
-                                        <p class="sub-p"><!-- react-text: 1121 -->then just<!-- /react-text -->
-                                            <!-- react-text: 1122 --> <!-- /react-text --><!-- react-text: 1123 -->
-                                            $13.95<!-- /react-text --><!-- react-text: 1124 -->/<!-- /react-text -->
-                                            <!-- react-text: 1125 -->mo<!-- /react-text --></p>
+                                    <div class="columns hide-for-12 medium-12 large-6">
+                                        <p id="indivi-pay" class="headline-p">7 Day Free Trial</p>
+                                        <p id="indivi-desc" class="sub-p">then just $13.95/mo</p>
                                         <p class="aboutPlan noModal hide-for-large">Designed to be used by one
                                             individual. This plan does not support any sharing or public showing of
                                             ROMWOD.</p>
@@ -71,21 +66,18 @@
                                         </ul>
                                     </div>
                                 </div><!-- react-empty: 1149 -->
-                                <div class="planWrapper columns small-6 large-12">
+                                <div id="gyms-div" class="planWrapper columns small-6 large-12">
                                     <div class="columns small-12 medium-12 large-6"><h6 class="planType">
                                             <!-- react-text: 1153 -->Affiliate<!-- /react-text -->
                                             <!-- react-text: 1154 --> Plan<!-- /react-text --></h6>
                                         <p class="planFor"><!-- react-text: 1156 -->For <!-- /react-text -->
-                                            <!-- react-text: 1157 -->Gyms<!-- /react-text --><!-- react-text: 1158 -->.
-                                            <!-- /react-text --></p><label class="selectPlanButton">
-                                            <button type="radio" name="plan" data-code="affiliate-monthly" value="6">
-                                                <span class="unselected">Select Plan</span><span class="theSelected">Selected</span>
+                                            <!-- react-text: 1157 -->Gyms<!-- /react-text --><!-- react-text: 1158 -->.<!-- /react-text --></p><label class="selectPlanButton">
+                                            <button id="gyms-btn" type="radio" name="plan" data-code="affiliate-monthly" value="6">
+                                                <span id="gyms-unselected" class="unselected">Select Plan</span><span class="theSelected">Selected</span>
                                             </button>
                                         </label></div>
-                                    <div class="columns hide-for-12 medium-12 large-6"><p class="sub-p">
-                                            <!-- react-text: 1165 --> <!-- /react-text --><!-- react-text: 1166 -->
-                                            $24.95<!-- /react-text --><!-- react-text: 1167 -->/<!-- /react-text -->
-                                            <!-- react-text: 1168 -->mo<!-- /react-text --></p>
+                                    <div class="columns hide-for-12 medium-12 large-6">
+                                        <p id="gyms-pay" class="sub-p">$24.95/mo</p>
                                         <p class="sub-p sub-ft">Free trial not included</p>
                                         <p class="aboutPlan noModal hide-for-large">Designed for affiliates(gyms) to
                                             have the opportunity to use ROMWOD as part of their daily or weekly
@@ -119,7 +111,7 @@
                                             <li class="show"><img class="pl-check"
                                                                   srcset="//assets.romwod.com/images/icons/icon-checkyellow.svg?auto=format&amp;dpr=2&amp;crop=faces&amp;fit=crop&amp;w=100&amp;h=100 2x, //assets.romwod.com/images/icons/icon-checkyellow.svg?auto=format&amp;dpr=3&amp;crop=faces&amp;fit=crop&amp;w=100&amp;h=100 3x"
                                                                   src="//assets.romwod.com/images/icons/icon-checkyellow.svg?auto=format&amp;dpr=1&amp;crop=faces&amp;fit=crop&amp;w=100&amp;h=100">
-                                                <!-- react-text: 1192 -->Goodies &amp; Perks<!-- /react-text --></li>
+                                                <!-- react-text: 1192 -->Goodies and Perks<!-- /react-text --></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -164,30 +156,47 @@
                                                                 data-recurly="last_name"></fieldset>
                                                 </div>
                                                 <div class="inputWrapper">
-                                                    <fieldset><label class="" id="number-label"><!-- react-text: 39 -->
-                                                            Credit Card Number<!-- /react-text --></label><input
-                                                                type="text" class="" value="" name="card_number"
-                                                                >
+                                                    <fieldset>
+                                                        <label class="" id="number-label"><!-- react-text: 39 -->
+                                                            Credit Card Number<!-- /react-text --></label>
+                                                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="cc-number" class="" value="" name="card_number">
                                                     </fieldset>
                                                 </div>
                                                 <div class="inputWrapper input-half">
-                                                    <fieldset><label class="" id="month-label"><!-- react-text: 44 -->
+                                                    <fieldset>
+                                                        <label class="" id="month-label"><!-- react-text: 44 -->
                                                             Month/Year (MM/YYYY)<!-- /react-text --></label>
-                                                        <input type="text" class="" value="" name="date">
+                                                        <div style="line-height: 0px; display: inline-flex;">
+                                                            <div data-recurly="month" style="display: inline-block; width: 50%;">
+                                                                <div class="">
+                                                                    <input type="text" placeholder="MONTH (MM)" maxlength="2" aria-required="true" autocomplete="cc-exp-month">
+                                                                </div>
+                                                            </div>
+                                                            <div data-recurly="year" style="display: inline-block; width: 50%;">
+                                                                <div class="recurly-hosted-field recurly-hosted-field-year">
+                                                                    <input type="text" placeholder="YEAR (YYYY)" maxlength="4" aria-required="true" autocomplete="cc-exp-year">
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </fieldset>
                                                 </div>
                                                 <div class="inputWrapper input-half">
-                                                    <fieldset><label class="" id="cvv-label"><!-- react-text: 51 -->CCV
+                                                    <fieldset>
+                                                        <label class="" id="cvv-label"><!-- react-text: 51 -->CCV
                                                             <!-- /react-text --></label>
-                                                        <div data-recurly="cvv">
+                                                        <input id="recurly-hosted-field-input" type="text" pattern="\d*" placeholder="SECURITY CODE"
+                                                               title="security code" autocomplete="off">
+                                                        <!--div data-recurly="cvv">
                                                             <div class="recurly-hosted-field recurly-hosted-field-cvv">
                                                                 <iframe src="https://api.recurly.com/js/v1/field.html#config=%7B%22type%22%3A%22cvv%22%2C%22selector%22%3A%22%5Bdata-recurly%3Dcvv%5D%22%2C%22style%22%3A%7B%22fontFamily%22%3A%22Helvetica%22%2C%22fontSize%22%3A%2215px%22%2C%22fontColor%22%3A%22%23717171%22%2C%22fontWeight%22%3A%22100%22%2C%22fontVariant%22%3A%22small-caps%22%2C%22fontStyle%22%3A%22normal%22%2C%22lineHeight%22%3A%221em%22%2C%22placeholder%22%3A%7B%22color%22%3A%22%23ccc%20!important%22%2C%22fontWeight%22%3A%22300%22%2C%22fontSize%22%3A%221rem%22%2C%22content%22%3A%22security%20code%22%7D%7D%2C%22recurly%22%3A%7B%22currency%22%3A%22USD%22%2C%22timeout%22%3A60000%2C%22publicKey%22%3A%22ewr1-1oXmHODBbGU7K7XfEd4t9A%22%2C%22parent%22%3Atrue%2C%22parentVersion%22%3A%224.6.2%22%2C%22cors%22%3Atrue%2C%22fraud%22%3A%7B%22kount%22%3A%7B%22dataCollector%22%3Afalse%7D%2C%22litle%22%3A%7B%7D%2C%22braintree%22%3A%7B%7D%7D%2C%22api%22%3A%22https%3A%2F%2Fapi.recurly.com%2Fjs%2Fv1%22%2C%22fields%22%3A%7B%22all%22%3A%7B%22style%22%3A%7B%22fontFamily%22%3A%22Helvetica%22%2C%22fontSize%22%3A%22.80rem%22%2C%22fontColor%22%3A%22%23717171%22%2C%22fontWeight%22%3A%22100%22%2C%22fontVariant%22%3A%22small-caps%22%2C%22fontStyle%22%3A%22normal%22%2C%22lineHeight%22%3A%221em%22%2C%22placeholder%22%3A%7B%22color%22%3A%22%23ccc%20!important%22%2C%22fontWeight%22%3A%22bold%22%2C%22fontSize%22%3A%221rem%22%7D%7D%7D%2C%22number%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dnumber%5D%22%2C%22style%22%3A%7B%22fontColor%22%3A%22%23717171%22%2C%22textIndent%22%3A%221em%22%2C%22placeholder%22%3A%7B%22content%22%3A%22xxxx-xxxx-xxxx-xxxx%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%2C%22month%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dmonth%5D%22%2C%22style%22%3A%7B%22fontColor%22%3A%22%23717171%22%2C%22textIndent%22%3A%221em%22%2C%22placeholder%22%3A%7B%22content%22%3A%22month%20(mm)%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%2C%22year%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dyear%5D%22%2C%22style%22%3A%7B%22textIndent%22%3A%221em%22%2C%22placeholder%22%3A%7B%22content%22%3A%22year%20(yyyy)%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%2C%22cvv%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dcvv%5D%22%2C%22style%22%3A%7B%22fontSize%22%3A%2215px%22%2C%22placeholder%22%3A%7B%22content%22%3A%22security%20code%22%2C%22color%22%3A%22%23ccc%20!important%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%7D%2C%22required%22%3A%5B%5D%7D%7D"
                                                                         border="0" frameborder="0"
                                                                         allowtransparency="true" scrolling="no"
                                                                         style="height: 100%; width: 100%; background: transparent;">
+                                                                    <input id="recurly-hosted-field-input" type="text" pattern="\d*" placeholder="security code"
+                                                                           title="security code" autocomplete="off">
                                                                 </iframe>
                                                             </div>
-                                                        </div>
+                                                        </div-->
                                                     </fieldset>
                                                 </div>
                                                 <input type="hidden" name="recurly-token" data-recurly="token" value="">
@@ -195,8 +204,9 @@
                                                     <div class="inputWrapper">
                                                         <fieldset><label class="" id="country-label">
                                                                 <!-- react-text: 58 -->Country
-                                                                <!-- /react-text --></label><select name="country"
-                                                                                                    data-recurly="country">
+                                                                <!-- /react-text --></label>
+                                                            <select class="countries" name="country"
+                                                                    data-recurly="country">
                                                                 <option value="US">United States</option>
                                                                 <option value="CA">Canada</option>
                                                                 <option value="GB">United Kingdom</option>
@@ -231,8 +241,7 @@
                                                                 <option value="BW">Botswana</option>
                                                                 <option value="BV">Bouvet Island</option>
                                                                 <option value="BR">Brazil</option>
-                                                                <option value="IO">British Indian Ocean Territory
-                                                                </option>
+                                                                <option value="IO">British Indian Ocean Territory</option>
                                                                 <option value="BN">Brunei Darussalam</option>
                                                                 <option value="BG">Bulgaria</option>
                                                                 <option value="BF">Burkina Faso</option>
@@ -250,8 +259,7 @@
                                                                 <option value="CO">Colombia</option>
                                                                 <option value="KM">Comoros</option>
                                                                 <option value="CG">Congo</option>
-                                                                <option value="CD">Congo, The Democratic Republic of
-                                                                    the
+                                                                <option value="CD">Congo, The Democratic Republic of the
                                                                 </option>
                                                                 <option value="CK">Cook Islands</option>
                                                                 <option value="CR">Costa Rica</option>
@@ -298,8 +306,7 @@
                                                                 <option value="HT">Haiti</option>
                                                                 <option value="HM">Heard Island and Mcdonald Islands
                                                                 </option>
-                                                                <option value="VA">Holy See (Vatican City State)
-                                                                </option>
+                                                                <option value="VA">Holy See (Vatican City State)</option>
                                                                 <option value="HN">Honduras</option>
                                                                 <option value="HK">Hong Kong</option>
                                                                 <option value="HU">Hungary</option>
@@ -319,15 +326,13 @@
                                                                 <option value="KZ">Kazakhstan</option>
                                                                 <option value="KE">Kenya</option>
                                                                 <option value="KI">Kiribati</option>
-                                                                <option value="KP">Democratic People's Republic of
-                                                                    Korea
+                                                                <option value="KP">Democratic People's Republic of Korea
                                                                 </option>
                                                                 <option value="KR">Korea, Republic of</option>
                                                                 <option value="XK">Kosovo</option>
                                                                 <option value="KW">Kuwait</option>
                                                                 <option value="KG">Kyrgyzstan</option>
-                                                                <option value="LA">Lao People's Democratic Republic
-                                                                </option>
+                                                                <option value="LA">Lao People's Democratic Republic</option>
                                                                 <option value="LV">Latvia</option>
                                                                 <option value="LB">Lebanon</option>
                                                                 <option value="LS">Lesotho</option>
@@ -337,8 +342,8 @@
                                                                 <option value="LT">Lithuania</option>
                                                                 <option value="LU">Luxembourg</option>
                                                                 <option value="MO">Macao</option>
-                                                                <option value="MK">Macedonia, The Former Yugoslav
-                                                                    Republic of
+                                                                <option value="MK">Macedonia, The Former Yugoslav Republic
+                                                                    of
                                                                 </option>
                                                                 <option value="MG">Madagascar</option>
                                                                 <option value="MW">Malawi</option>
@@ -352,8 +357,7 @@
                                                                 <option value="MU">Mauritius</option>
                                                                 <option value="YT">Mayotte</option>
                                                                 <option value="MX">Mexico</option>
-                                                                <option value="FM">Micronesia, Federated States of
-                                                                </option>
+                                                                <option value="FM">Micronesia, Federated States of</option>
                                                                 <option value="MD">Moldova, Republic of</option>
                                                                 <option value="MC">Monaco</option>
                                                                 <option value="MN">Mongolia</option>
@@ -379,8 +383,7 @@
                                                                 <option value="OM">Oman</option>
                                                                 <option value="PK">Pakistan</option>
                                                                 <option value="PW">Palau</option>
-                                                                <option value="PS">Palestinian Territory, Occupied
-                                                                </option>
+                                                                <option value="PS">Palestinian Territory, Occupied</option>
                                                                 <option value="PA">Panama</option>
                                                                 <option value="PG">Papua New Guinea</option>
                                                                 <option value="PY">Paraguay</option>
@@ -399,8 +402,7 @@
                                                                 <option value="KN">Saint Kitts and Nevis</option>
                                                                 <option value="LC">Saint Lucia</option>
                                                                 <option value="PM">Saint Pierre and Miquelon</option>
-                                                                <option value="VC">Saint Vincent and the Grenadines
-                                                                </option>
+                                                                <option value="VC">Saint Vincent and the Grenadines</option>
                                                                 <option value="WS">Samoa</option>
                                                                 <option value="SM">San Marino</option>
                                                                 <option value="ST">Sao Tome and Principe</option>
@@ -444,8 +446,7 @@
                                                                 <option value="UG">Uganda</option>
                                                                 <option value="UA">Ukraine</option>
                                                                 <option value="AE">United Arab Emirates</option>
-                                                                <option value="UM">United States Minor Outlying
-                                                                    Islands
+                                                                <option value="UM">United States Minor Outlying Islands
                                                                 </option>
                                                                 <option value="UY">Uruguay</option>
                                                                 <option value="UZ">Uzbekistan</option>
@@ -482,19 +483,22 @@
                                                         </fieldset>
                                                     </div>
                                                     <div class="inputWrapper input-one-third">
-                                                        <fieldset><label class="" id="city-label">
-                                                                <!-- react-text: 318 -->City<!-- /react-text --></label><input
-                                                                    type="text" class="" value="" name="city"
+                                                        <fieldset>
+                                                            <label class="" id="city-label">
+                                                                <!-- react-text: 318 -->City<!-- /react-text --></label>
+                                                            <input type="text" class="" value="" name="city"
                                                                     aria-labelledby="city-label" data-recurly="city">
                                                         </fieldset>
                                                     </div>
                                                     <div class="inputWrapper input-one-third inputState">
-                                                        <fieldset><label class="" id="state-label">
+                                                        <fieldset>
+                                                            <label class="" id="state-label">
                                                                 <!-- react-text: 323 -->State
                                                                 <!-- /react-text --></label>
-                                                            <div>
+                                                            <input type="text" class="states" value="" name="state" data-recurly="state">
+                                                            <!--div>
                                                                 <div class="loader hide"></div>
-                                                                <div class=""><select name="state" data-recurly="state">
+                                                                <div class=""><select class="states" name="state" data-recurly="state">
                                                                         <option value="AK">Alaska</option>
                                                                         <option value="AL">Alabama</option>
                                                                         <option value="AR">Arkansas</option>
@@ -550,8 +554,8 @@
                                                                         </option>
                                                                         <option value="AE">Armed Forces Europe</option>
                                                                         <option value="AP">Armed Forces Pacific</option>
-                                                                    </select><!-- react-empty: 328 --></div>
-                                                            </div>
+                                                                    </select><!-- react-empty: 328 --><!--/div>
+                                                            <!--/div-->
                                                         </fieldset>
                                                     </div>
                                                     <div class="inputWrapper input-one-third input-one-third-last">
@@ -584,7 +588,7 @@
                                                 <div class="inputWrapper">
                                                     <fieldset><label class="" id="country-label">
                                                             <!-- react-text: 349 -->Country
-                                                            <!-- /react-text --></label><select name="country"
+                                                            <!-- /react-text --></label><select class="countries" name="country"
                                                                                                 data-recurly="country">
                                                             <option value="US">United States</option>
                                                             <option value="CA">Canada</option>
@@ -872,7 +876,7 @@
                                                             State<!-- /react-text --></label>
                                                         <div>
                                                             <div class="loader hide"></div>
-                                                            <div class=""><select name="state" data-recurly="state">
+                                                            <div class=""><select class="states" name="state" data-recurly="state">
                                                                     <option value="AK">Alaska</option>
                                                                     <option value="AL">Alabama</option>
                                                                     <option value="AR">Arkansas</option>
@@ -1002,7 +1006,7 @@
                                                         <div class="inputWrapper">
                                                             <fieldset><label class="" id="country-label">
                                                                     <!-- react-text: 660 -->Country
-                                                                    <!-- /react-text --></label><select name="country"
+                                                                    <!-- /react-text --></label><select class="countries" name="country"
                                                                                                         data-recurly="country">
                                                                     <option value="US">United States</option>
                                                                     <option value="CA">Canada</option>
@@ -1312,7 +1316,7 @@
                                                                     <!-- /react-text --></label>
                                                                 <div>
                                                                     <div class="loader hide"></div>
-                                                                    <div class=""><select name="state"
+                                                                    <div class=""><select class="states" name="state"
                                                                                           data-recurly="state">
                                                                             <option value="AK">Alaska</option>
                                                                             <option value="AL">Alabama</option>
@@ -1446,6 +1450,7 @@
             </li>
         </ul>
     </div>
+
 
 @endsection
 
