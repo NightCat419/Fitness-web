@@ -36,7 +36,7 @@
                                 </ul>
 
                                 <div class="panel-footer text-center">
-                                    <a href="{{ route('register') }}" class="btn btn-primary" style="width: 100%">7-Day Free Trial</a>
+                                    <a href="{{ route('activate_account') }}" class="btn btn-primary" style="width: 100%">7-Day Free Trial</a>
                                 </div>
 
                             </div>
@@ -69,7 +69,7 @@
                                 </ul>
 
                                 <div class="panel-footer text-center">
-                                    <a href="{{ route('register') }}" class="btn btn-primary" style="width: 100%">Get Started</a>
+                                    <a href="{{ route('activate_account') }}" class="btn btn-primary" style="width: 100%">Get Started</a>
                                 </div>
 
                             </div>

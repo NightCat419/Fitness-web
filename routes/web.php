@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Auth::routes();
 
 Route::get('/', 'App\HomeController@index')->name('home');
@@ -33,3 +35,6 @@ Route::get('/activate/account', 'App\ActivateAccountController@index')->name('ac
 Route::post('/ajax/add_to_favourites', array('as' => 'ajaxaddtofavourites', 'uses' => 'App\WorkoutController@addToFavourites'));
 Route::post('/ajax/remove_from_favourites', array('as' => 'ajaxremovefromfavourites', 'uses' => 'App\WorkoutController@removeFromFavourites'));
 Route::post('/ajax/set_current_time_zone', array('as' => 'ajaxsetcurrenttimezone','uses' => 'App\HomeController@setCurrentTimeZone'));
+
+Route::post ( '/activate/account','App\ActivateAccountController@stripePay')->name('activate_account');
+

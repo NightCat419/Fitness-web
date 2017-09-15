@@ -517,9 +517,9 @@ fieldset {
     outline: none;
 }
 #recurly-cc-form .inputWrapper input {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     padding-top: 15px;
-    color: #717171;
+    color: #000000;
     text-indent: 0;
 }
 .recurly-hosted-field {
@@ -595,7 +595,7 @@ select {
 #recurly-cc-form .inputWrapper select {
     margin-bottom: 0;
     font-size: 2.1rem;
-    color: #717171;
+    color: #000000;
     padding-bottom: 0px;
     padding-left: 0px;
 }

@@ -3,13 +3,13 @@
 @section('content')
 
     <div style="padding-left:70px;padding-right: 200px;background-color: #eee; height:100%">
-    <div class="small-centered" id="activateAccountPanel">
+        <div class="small-centered" id="activateAccountPanel">
 
             <h1>Activate</h1>
             <div id="modal-container">
                 <div >
                     <div class="row column activate-form-wrapper">
-                        <div id="activate_PlanList"
+                        <div id="activate_PlanList" data-pay-amount=""
                              class="medium-centered large-6 medium-8 columns plan-selection-column plan-selection-column-1">
                             <div><p class="selectaplan_label">Select a Plan</p>
                                 <div class="term-select">
@@ -136,22 +136,27 @@
                                     <!-- react-empty: 19 --><!-- react-empty: 20 --><!-- react-empty: 21 --></ul>
                                 <div class="tabs-content">
                                     <div class="tabs-panel is-active">
-                                        <form id="recurly-cc-form">
+
+                                        <script src='https://js.stripe.com/v2/' type='text/javascript'></script>
+                                        <form id="recurly-cc-form" class="require-validation"
+                                              data-cc-on-file="false" method="post">
+                                            {{ csrf_field() }}
                                             <div class="inputFieldsWrapper">
                                                 <div class="inputWrapper input-half">
                                                     <fieldset><label class="" id="first_name-label">
                                                             <!-- react-text: 29 -->First Name
-                                                            <!-- /react-text --></label><input type="text" class=""
-                                                                                               value=""
-                                                                                               name="first_name"
-                                                                                               aria-labelledby="first_name-label"
-                                                                                               data-recurly="first_name">
+                                                            <!-- /react-text --></label>
+                                                            <input type="text" class=""
+                                                                   value={{ Auth::user()->firstname }}
+                                                                   name="first_name"
+                                                                   aria-labelledby="first_name-label"
+                                                                   data-recurly="first_name">
                                                     </fieldset>
                                                 </div>
                                                 <div class="inputWrapper input-half">
                                                     <fieldset><label class="" id="last_name-label">
                                                             <!-- react-text: 34 -->Last Name<!-- /react-text --></label><input
-                                                                type="text" class="" value="" name="last_name"
+                                                                type="text" class="" value={{ Auth::user()->lastname }} name="last_name"
                                                                 aria-labelledby="last_name-label"
                                                                 data-recurly="last_name"></fieldset>
                                                 </div>
@@ -159,7 +164,8 @@
                                                     <fieldset>
                                                         <label class="" id="number-label"><!-- react-text: 39 -->
                                                             Credit Card Number<!-- /react-text --></label>
-                                                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="cc-number" class="" value="" name="card_number">
+                                                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="16" autocomplete="cc-number"
+                                                               class="form-control card-number" value="" name="card_number">
                                                     </fieldset>
                                                 </div>
                                                 <div class="inputWrapper input-half">
@@ -169,12 +175,14 @@
                                                         <div style="line-height: 0px; display: inline-flex;">
                                                             <div data-recurly="month" style="display: inline-block; width: 50%;">
                                                                 <div class="">
-                                                                    <input type="text" placeholder="MONTH (MM)" maxlength="2" aria-required="true" autocomplete="cc-exp-month">
+                                                                    <input type="text" placeholder="MONTH (MM)" maxlength="2" value="" name="expire-month"
+                                                                           class="form-control card-expiry-month" aria-required="true" autocomplete="cc-exp-month">
                                                                 </div>
                                                             </div>
                                                             <div data-recurly="year" style="display: inline-block; width: 50%;">
                                                                 <div class="recurly-hosted-field recurly-hosted-field-year">
-                                                                    <input type="text" placeholder="YEAR (YYYY)" maxlength="4" aria-required="true" autocomplete="cc-exp-year">
+                                                                    <input type="text" placeholder="YEAR (YYYY)" maxlength="4" value="" name="expire-year"
+                                                                           class="form-control card-expiry-year" aria-required="true" autocomplete="cc-exp-year">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -184,8 +192,8 @@
                                                     <fieldset>
                                                         <label class="" id="cvv-label"><!-- react-text: 51 -->CCV
                                                             <!-- /react-text --></label>
-                                                        <input id="recurly-hosted-field-input" type="text" pattern="\d*" placeholder="SECURITY CODE"
-                                                               title="security code" autocomplete="off">
+                                                        <input id="recurly-hosted-field-input" type="text" pattern="\d*" placeholder="SECURITY CODE" value=""
+                                                               class="form-control card-ccv" title="security code" autocomplete="off">
                                                         <!--div data-recurly="cvv">
                                                             <div class="recurly-hosted-field recurly-hosted-field-cvv">
                                                                 <iframe src="https://api.recurly.com/js/v1/field.html#config=%7B%22type%22%3A%22cvv%22%2C%22selector%22%3A%22%5Bdata-recurly%3Dcvv%5D%22%2C%22style%22%3A%7B%22fontFamily%22%3A%22Helvetica%22%2C%22fontSize%22%3A%2215px%22%2C%22fontColor%22%3A%22%23717171%22%2C%22fontWeight%22%3A%22100%22%2C%22fontVariant%22%3A%22small-caps%22%2C%22fontStyle%22%3A%22normal%22%2C%22lineHeight%22%3A%221em%22%2C%22placeholder%22%3A%7B%22color%22%3A%22%23ccc%20!important%22%2C%22fontWeight%22%3A%22300%22%2C%22fontSize%22%3A%221rem%22%2C%22content%22%3A%22security%20code%22%7D%7D%2C%22recurly%22%3A%7B%22currency%22%3A%22USD%22%2C%22timeout%22%3A60000%2C%22publicKey%22%3A%22ewr1-1oXmHODBbGU7K7XfEd4t9A%22%2C%22parent%22%3Atrue%2C%22parentVersion%22%3A%224.6.2%22%2C%22cors%22%3Atrue%2C%22fraud%22%3A%7B%22kount%22%3A%7B%22dataCollector%22%3Afalse%7D%2C%22litle%22%3A%7B%7D%2C%22braintree%22%3A%7B%7D%7D%2C%22api%22%3A%22https%3A%2F%2Fapi.recurly.com%2Fjs%2Fv1%22%2C%22fields%22%3A%7B%22all%22%3A%7B%22style%22%3A%7B%22fontFamily%22%3A%22Helvetica%22%2C%22fontSize%22%3A%22.80rem%22%2C%22fontColor%22%3A%22%23717171%22%2C%22fontWeight%22%3A%22100%22%2C%22fontVariant%22%3A%22small-caps%22%2C%22fontStyle%22%3A%22normal%22%2C%22lineHeight%22%3A%221em%22%2C%22placeholder%22%3A%7B%22color%22%3A%22%23ccc%20!important%22%2C%22fontWeight%22%3A%22bold%22%2C%22fontSize%22%3A%221rem%22%7D%7D%7D%2C%22number%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dnumber%5D%22%2C%22style%22%3A%7B%22fontColor%22%3A%22%23717171%22%2C%22textIndent%22%3A%221em%22%2C%22placeholder%22%3A%7B%22content%22%3A%22xxxx-xxxx-xxxx-xxxx%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%2C%22month%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dmonth%5D%22%2C%22style%22%3A%7B%22fontColor%22%3A%22%23717171%22%2C%22textIndent%22%3A%221em%22%2C%22placeholder%22%3A%7B%22content%22%3A%22month%20(mm)%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%2C%22year%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dyear%5D%22%2C%22style%22%3A%7B%22textIndent%22%3A%221em%22%2C%22placeholder%22%3A%7B%22content%22%3A%22year%20(yyyy)%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%2C%22cvv%22%3A%7B%22selector%22%3A%22%5Bdata-recurly%3Dcvv%5D%22%2C%22style%22%3A%7B%22fontSize%22%3A%2215px%22%2C%22placeholder%22%3A%7B%22content%22%3A%22security%20code%22%2C%22color%22%3A%22%23ccc%20!important%22%2C%22fontWeight%22%3A%22300%22%7D%7D%7D%7D%2C%22required%22%3A%5B%5D%7D%7D"
@@ -487,7 +495,7 @@
                                                             <label class="" id="city-label">
                                                                 <!-- react-text: 318 -->City<!-- /react-text --></label>
                                                             <input type="text" class="" value="" name="city"
-                                                                    aria-labelledby="city-label" data-recurly="city">
+                                                                   aria-labelledby="city-label" data-recurly="city">
                                                         </fieldset>
                                                     </div>
                                                     <div class="inputWrapper input-one-third inputState">
@@ -568,9 +576,29 @@
                                                                                                    data-recurly="postal_code">
                                                         </fieldset>
                                                     </div>
+                                                    <div class='inputWrapper' style="padding-top: 0px">
+                                                        <div class='col-md-12 error form-group hide'>
+                                                            <div class='alert-danger alert'>Please correct the errors and try
+                                                                again.</div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="billingAdvisory">Cancel within first 7 days of trial period to avoid being
+                                                        billed.</p>
+                                                    <button class="button get-started-button" type="submit"><!-- react-text: 938 -->Activate
+                                                        <!-- /react-text --><!-- react-text: 939 --> my account<!-- /react-text --></button>
                                                 </div>
                                             </div>
+                                            <input type="hidden" id="input-pay-amount" name="input-pay-amount" value="">
+                                            <input type="hidden" id="pay-type" name="pay-type" value="monthly">
+                                            <input type="hidden" id="plan-type" name="plan-type" value="">
                                         </form>
+                                        @if ((Session::has('success-message')))
+                                            <div class="alert alert-success col-md-12">
+                                                {{ Session::get('success-message') }}</div>
+                                        @endif @if ((Session::has('fail-message')))
+                                            <div class="alert alert-danger col-md-12">
+                                                {{ Session::get('fail-message') }}</div>
+                                        @endif
                                     </div>
                                     <div class="tabs-panel">
                                         <div id="amazon_section"><h3>Amazon</h3>
@@ -1397,14 +1425,78 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="billingAdvisory">Cancel within first 7 days of trial period to avoid being
-                                billed.</p>
-                            <button class="button get-started-button"><!-- react-text: 938 -->Activate
-                                <!-- /react-text --><!-- react-text: 939 --> my account<!-- /react-text --></button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+                    integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="
+                    crossorigin="anonymous"></script>
+            <script
+                    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+                    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+                    crossorigin="anonymous"></script>
+            <script>
+                $(function() {
+                    $('form.require-validation').bind('submit', function(e) {
+                        var $form         = $(e.target).closest('form'),
+                            inputSelector = ['input[type=email]', 'input[type=password]',
+                                'input[type=text]', 'input[type=file]',
+                                'textarea'].join(', '),
+                            $inputs       = $form.find('.required').find(inputSelector),
+                            $errorMessage = $form.find('div.error'),
+                            valid         = true;
+
+                        $errorMessage.addClass('hide');
+                        $('.has-error').removeClass('has-error');
+                        $inputs.each(function(i, el) {
+                            var $input = $(el);
+                            if ($input.val() === '') {
+                                $input.parent().addClass('has-error');
+                                $errorMessage.removeClass('hide');
+                                e.preventDefault(); // cancel on first error
+                            }
+                        });
+                    });
+                });
+
+                $(function() {
+                    var $form = $("#recurly-cc-form");
+                    //var $amount = $('#activate_PlanList');
+
+                    $form.on('submit', function(e) {
+                        if (!$form.data('cc-on-file')) {
+                            e.preventDefault();
+                            //Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+                            Stripe.setPublishableKey("<?php echo env('STRIPE_KEY') ?>");
+                            Stripe.createToken({
+                                number: $('.card-number').val(),
+                                cvc: $('.card-ccv').val(),
+                                exp_month: $('.card-expiry-month').val(),
+                                exp_year: $('.card-expiry-year').val()
+                                //amount: $amount.data('pay-amount')
+                            }, stripeResponseHandler);
+                        }
+                    });
+
+                    function stripeResponseHandler(status, response) {
+                        if (response.error) {
+                            $('.error')
+                                .removeClass('hide')
+                                .find('.alert')
+                                .text(response.error.message);
+                        } else {
+                            // token contains id, last4, and card type
+                            var token = response['id'];
+                            // insert the token into the form so it gets submitted to the server
+                            $form.find('input[type=text]').empty();
+                            $form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+                            $form.get(0).submit();
+                        }
+                    }
+                })
+            </script>
             {{--<script type="text/javascript">--}}
             {{--var payWithAmazon = new PayWithAmazon({--}}
             {{--clientId: 'amzn1.application-oa2-client.88337a2f01234cde9cddf67a3b7d1ad7',--}}

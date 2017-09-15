@@ -3474,6 +3474,9 @@ ul.verticle_bars li {
     width: 35px
 }
 .alert-success {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 600 !important;
     color: #ffffff;
     background-color: rgba(38, 185, 154, 0.88);
     border-color: rgba(38, 185, 154, 0.88)
@@ -3490,6 +3493,12 @@ ul.verticle_bars li {
 }
 .alert-danger,
 .alert-error {
+    font-family: "Tungsten A", "Tungsten B";
+    font-style: normal;
+    font-weight: 600 !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 0.025em;
     color: #E9EDEF;
     background-color: rgba(231, 76, 60, 0.88);
     border-color: rgba(231, 76, 60, 0.88)

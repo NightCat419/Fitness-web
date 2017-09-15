@@ -4,6 +4,10 @@
 
 $(document).ready(function() {
 
+    var pay_month = true;
+    var indivi_plan = false;
+    var gyms_plan = false;
+
     $('.monthlybtn').on('click', function () {
 
         var cls = $(this).attr("class");
@@ -13,6 +17,14 @@ $(document).ready(function() {
             $('#indivi-pay').text('7 Day Free Trial');
             $('#indivi-desc').text('then just $13.95/mo');
             $('#gyms-pay').text('$24.95/mo');
+            $('#pay-type').val('monthly');
+            pay_month = true;
+
+            if (indivi_plan == true) {
+                $('#input-pay-amount').val(13.95);
+            } else if (gyms_plan == true) {
+                $('#input-pay-amount').val(24.95);
+            }
         }
     });
 
@@ -25,6 +37,14 @@ $(document).ready(function() {
             $('#indivi-pay').text('$150.00/year');
             $('#indivi-desc').text('Free trial not included');
             $('#gyms-pay').text('$250.00/year');
+            $('#pay-type').val('yearly');
+            pay_month = false;
+
+            if (indivi_plan == true) {
+                $('#input-pay-amount').val(150);
+            } else if (gyms_plan == true) {
+                $('#input-pay-amount').val(250);
+            }
         }
     });
 
@@ -43,6 +63,16 @@ $(document).ready(function() {
 
         $('#indivi-unselected').hide();
         $('#gyms-unselected').show();
+        $('#plan-type').val('ATHLETE');
+
+        indivi_plan = true;
+        gyms_plan = false;
+
+        if (pay_month == true) {
+            $('#input-pay-amount').val(13.95);
+        } else {
+            $('#input-pay-amount').val(150);
+        }
     });
 
     $('#gyms-btn').on('click', function () {
@@ -60,6 +90,17 @@ $(document).ready(function() {
 
         $('#gyms-unselected').hide();
         $('#indivi-unselected').show();
+        $('#plan-type').val('AFFILIATE');
+
+        gyms_plan = true;
+        indivi_plan = false;
+
+        if (pay_month == true) {
+            $('#input-pay-amount').val(24.95);
+        } else {
+            $('#input-pay-amount').val(250);
+        }
+
     });
 
 });

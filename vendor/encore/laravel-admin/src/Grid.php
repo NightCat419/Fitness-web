@@ -181,7 +181,6 @@ class Grid
         $this->rows = new Collection();
         $this->builder = $builder;
 
-        $this->setDbColumns();
         $this->setupTools();
         $this->setupFilter();
         $this->setupExporter();
@@ -578,12 +577,8 @@ class Grid
      */
     protected function buildRows(array $data)
     {
-        $this->rows = collect($data)->map(function ($val, $key) {
-            $row = new Row($key, $val);
-
-            $row->setKeyName($this->keyName);
-
-            return $row;
+        $this->rows = collect($data)->map(function ($model, $number) {
+            return new Row($number, $model);
         });
 
         if ($this->rowsCallback) {
@@ -784,6 +779,10 @@ class Grid
      */
     protected function handleTableColumn($method, $label)
     {
+        if (empty($this->dbColumns)) {
+            $this->setDbColumns();
+        }
+
         if ($this->dbColumns->has($method)) {
             return $this->addColumn($method, $label);
         }
